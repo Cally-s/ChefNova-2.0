@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chef Nova — your intelligent companion for recipes, pantry planning, and kitchen confidence.">
+  <title>Chef Nova — Cook with confidence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-initializing">
+  <div id="appStartupStatus" class="app-startup-status" role="status" aria-live="polite">Loading Chef Nova...</div>
+  <main id="welcomeAuthPage" class="auth-page welcome-auth-page hidden" hidden aria-hidden="true">
+    <section class="auth-shell welcome-auth-card" aria-labelledby="welcomeAuthTitle">
+      <div class="auth-brand-panel welcome-auth-copy">
+        <a class="welcome-logo" href="#home" aria-label="Chef Nova welcome">
+          <span class="brand-mark">✦</span><span>Chef <strong>Nova</strong></span>
+        </a>
+        <span class="eyebrow">COOKING MISSION CONTROL</span>
+        <h1 id="welcomeAuthTitle">Welcome to Chef Nova</h1>
+        <p>Your personal cooking and meal-planning assistant.</p>
+        <div class="auth-brand-notes" aria-hidden="true">
+          <span>AI pantry radar</span>
+          <span>Weekly meal orbit</span>
+          <span>Recipe launch path</span>
+        </div>
+        <div class="welcome-space-decoration" aria-hidden="true">
+          <span class="welcome-planet"></span>
+          <span class="welcome-orbit"></span>
+          <span class="welcome-utensil">Spoon</span>
+        </div>
+      </div>
+      <div class="auth-content-panel">
+        <div class="auth-tabs welcome-tabs" role="tablist" aria-label="Chef Nova account options">
+          <button class="auth-tab active" id="welcomeLoginTab" type="button" role="tab" aria-selected="true" aria-controls="welcomeLoginPanel" data-welcome-tab="login">Log In</button>
+          <button class="auth-tab" id="welcomeSignUpTab" type="button" role="tab" aria-selected="false" aria-controls="welcomeRegisterPanel" tabindex="-1" data-welcome-tab="register">Sign Up</button>
+        </div>
+        <section class="welcome-auth-panel auth-panel" id="welcomeLoginPanel" role="tabpanel" aria-labelledby="welcomeLoginTab">
+          <form id="welcomeLoginForm" class="account-form" novalidate>
+            <div class="form-heading"><h2 tabindex="-1">Log In</h2><p>For users who already have an account.</p></div>
+            <label>Email<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+            <label>Password<span class="password-field"><input name="password" type="password" autocomplete="current-password" required placeholder="Your password"><button class="password-toggle" type="button" data-toggle-password aria-pressed="false">Show</button></span></label>
+            <button class="button primary full" type="submit">Log In</button><p class="form-message" id="welcomeLoginMessage" aria-live="polite"></p>
+          </form>
+        </section>
+        <section class="welcome-auth-panel auth-panel" id="welcomeRegisterPanel" role="tabpanel" aria-labelledby="welcomeSignUpTab" hidden>
+          <form id="welcomeRegisterForm" class="account-form" novalidate>
+            <div class="form-heading"><h2 tabindex="-1">Create Your Account</h2><p>For new users.</p></div>
+            <fieldset><legend>Account Details</legend><div class="form-grid two"><label>Name<input name="name" required autocomplete="name" placeholder="Your name"></label><label>Email<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label></div><div class="form-grid two"><label>Password <small>Use at least 8 characters.</small><span class="password-field"><input name="password" type="password" autocomplete="new-password" required minlength="8" placeholder="At least 8 characters"><button class="password-toggle" type="button" data-toggle-password aria-pressed="false">Show</button></span></label><label>Confirm password<span class="password-field"><input name="confirmPassword" type="password" autocomplete="new-password" required minlength="8" placeholder="Re-enter password"><button class="password-toggle" type="button" data-toggle-password aria-pressed="false">Show</button></span></label></div></fieldset>
+            <fieldset><legend>Personal Details</legend><div class="form-grid two"><label>Age<input name="age" type="number" min="1" max="120" step="1" required placeholder="Age"></label><label>Gender<select name="gender" required><option>Prefer not to say</option><option>Female</option><option>Male</option><option>Non-binary</option><option>Other</option></select></label></div><label>Phone number <small>(optional)</small><input name="phone" type="tel" autocomplete="tel" placeholder="Phone number"></label></fieldset>
+            <fieldset><legend>Food Preferences</legend><label>Dietary preference<select name="dietaryPreference" required><option>No preference</option><option>Vegetarian</option><option>Vegan</option><option>Pescatarian</option><option>Halal</option><option>Kosher</option><option>Gluten-free</option><option>Dairy-free</option><option>Other</option></select></label><label>Allergies<textarea name="allergies" rows="3" required placeholder="Peanuts, shellfish, dairy, or None"></textarea></label></fieldset>
+            <button class="button primary full" type="submit">Create Account</button><p class="privacy-note">Stored only in this browser using localStorage.</p><p class="form-message" id="welcomeRegisterMessage" aria-live="polite"></p>
+          </form>
+        </section>
+        <div class="auth-divider" aria-hidden="true"><span>or</span></div>
+        <div class="guest-auth-area">
+          <button class="button secondary full welcome-guest-button" id="continueGuestBtn" type="button">Continue Without an Account</button>
+          <p>Explore Chef Nova as a guest. Your progress will not be permanently saved.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section id="nutritionSetupIntro" class="nutrition-setup-screen hidden" aria-labelledby="nutritionSetupTitle" hidden aria-hidden="true">
+    <div class="nutrition-setup-card">
+      <p class="setup-eyebrow">Optional</p>
+      <h1 id="nutritionSetupTitle" tabindex="-1">Personal Nutrition Setup</h1>
+      <p>This optional setup helps Chef Nova provide estimated nutrition goals and meal suggestions. It is not medical advice.</p>
+      <p class="nutrition-safety-message">Body measurements are only one part of health. Chef Nova focuses on balanced meals, variety, activity support, and consistent habits.</p>
+      <div class="nutrition-privacy-notice">
+        <h2>Privacy</h2>
+        <p>Your body and nutrition information is stored only on this device.</p>
+        <p>This information is private and belongs only to your account on this browser.</p>
+      </div>
+      <div class="nutrition-setup-actions">
+        <button class="button primary" id="startNutritionSetupButton" type="button">Set Up My Nutrition Profile</button>
+        <button class="button secondary" id="skipNutritionSetupButton" type="button">Skip for Now</button>
+      </div>
+    </div>
+  </section>
+  <section id="nutritionProfileFormScreen" class="nutrition-setup-screen hidden" aria-labelledby="nutritionProfileFormTitle" hidden aria-hidden="true">
+    <div class="nutrition-setup-card nutrition-profile-form-card">
+      <p class="setup-eyebrow">Optional</p>
+      <h1 id="nutritionProfileFormTitle" tabindex="-1">Personal Nutrition Profile</h1>
+      <p>This optional setup helps Chef Nova provide estimated nutrition goals and meal suggestions. It is not medical advice.</p>
+      <p class="nutrition-safety-message">Body measurements are only one part of health. Chef Nova focuses on balanced meals, variety, activity support, and consistent habits.</p>
+      <div class="nutrition-privacy-notice">
+        <h2>Privacy</h2>
+        <p>Your body and nutrition information is stored only on this device.</p>
+        <p>This information is private and belongs only to your account on this browser.</p>
+      </div>
+      <p>Enter only the information you are comfortable sharing. You can skip this setup or change it later.</p>
+      <form id="nutritionProfileForm" class="nutrition-profile-form" novalidate>
+        <div id="nutritionFormErrorSummary" class="form-error-summary nutrition-error-summary" role="alert" tabindex="-1" hidden>
+          <p>Please review the highlighted fields.</p>
+        </div>
+        <label for="nutritionAge">Age <span class="optional-label">Optional</span><input id="nutritionAge" name="nutritionAge" type="number" min="13" max="120" step="1" inputmode="numeric"></label>
+        <fieldset class="nutrition-radio-group" id="nutritionUnitSystemGroup">
+          <legend>Preferred unit system</legend>
+          <label><input type="radio" name="nutritionUnitSystem" value="metric"> Kilograms and centimetres</label>
+          <label><input type="radio" name="nutritionUnitSystem" value="imperial"> Pounds and feet/inches</label>
+          <p class="form-error" id="nutritionUnitSystemError" hidden></p>
+        </fieldset>
+        <div id="nutritionMetricFields" class="nutrition-unit-fields" hidden>
+          <label for="nutritionHeightCm">Height in centimetres <span class="optional-label">Optional</span><input id="nutritionHeightCm" name="nutritionHeightCm" type="number" min="80" max="250" step="0.1" inputmode="decimal"></label>
+          <label for="nutritionWeightKg">Current weight in kilograms <span class="optional-label">Optional</span><input id="nutritionWeightKg" name="nutritionWeightKg" type="number" min="20" max="350" step="0.1" inputmode="decimal"></label>
+        </div>
+        <div id="nutritionImperialFields" class="nutrition-unit-fields imperial" hidden>
+          <label for="nutritionHeightFeet">Height in feet <span class="optional-label">Optional</span><input id="nutritionHeightFeet" name="nutritionHeightFeet" type="number" min="2" max="8" step="1" inputmode="numeric"></label>
+          <label for="nutritionHeightInches">Additional inches <span class="optional-label">Optional</span><input id="nutritionHeightInches" name="nutritionHeightInches" type="number" min="0" max="11" step="1" inputmode="numeric"></label>
+          <label for="nutritionWeightLb">Current weight in pounds <span class="optional-label">Optional</span><input id="nutritionWeightLb" name="nutritionWeightLb" type="number" min="45" max="800" step="0.1" inputmode="decimal"></label>
+        </div>
+        <label for="nutritionActivityLevel">Activity level <span class="optional-label">Optional</span><select id="nutritionActivityLevel" name="nutritionActivityLevel">
+          <option value="">Prefer not to answer</option>
+          <option value="mostly-inactive">Mostly inactive</option>
+          <option value="lightly-active">Lightly active</option>
+          <option value="moderately-active">Moderately active</option>
+          <option value="very-active">Very active</option>
+          <option value="athlete-or-intense-training">Athlete or intense training</option>
+        </select></label>
+        <label for="nutritionGeneralGoal">Goal <span class="optional-label">Optional</span><select id="nutritionGeneralGoal" name="nutritionGeneralGoal">
+          <option value="">Prefer not to answer</option>
+          <option value="maintain-current-weight">Maintain my current weight</option>
+          <option value="build-muscle">Build muscle</option>
+          <option value="improve-eating-habits">Improve my eating habits</option>
+          <option value="support-workouts">Support my workouts</option>
+          <option value="gradual-weight-change">Gradually change my weight</option>
+          <option value="prefer-not-to-choose">Prefer not to choose</option>
+        </select></label>
+        <section id="workoutSupportSection" class="nutrition-conditional-section workout-support-section" aria-labelledby="workoutSupportTitle" hidden>
+          <h2 id="workoutSupportTitle">Workout Support</h2>
+          <p id="workoutSupportDescription">Tell Chef Nova about your usual activity so meal suggestions can better support your routine.</p>
+          <p>These questions are optional. Chef Nova uses them only for general meal-planning suggestions.</p>
+          <div class="nutrition-unit-fields">
+            <label for="nutritionMainActivity">Main activity <span class="optional-label">Optional</span><input id="nutritionMainActivity" name="nutritionMainActivity" type="text" maxlength="80" placeholder="Example: basketball, running, gym workouts" aria-describedby="workoutSupportDescription"></label>
+            <label for="nutritionWorkoutDays">Workout days per week <span class="optional-label">Optional</span><input id="nutritionWorkoutDays" name="nutritionWorkoutDays" type="number" min="0" max="7" step="1" inputmode="numeric"></label>
+          </div>
+          <div class="nutrition-unit-fields">
+            <label for="nutritionWorkoutLength">Typical workout length <span class="optional-label">Optional</span><select id="nutritionWorkoutLength" name="nutritionWorkoutLength">
+              <option value="">Prefer not to answer</option>
+              <option value="less-than-30-minutes">Less than 30 minutes</option>
+              <option value="30-to-59-minutes">30–59 minutes</option>
+              <option value="60-to-89-minutes">60–89 minutes</option>
+              <option value="90-minutes-or-longer">90 minutes or longer</option>
+            </select></label>
+            <label for="nutritionTrainingFocus">Training focus <span class="optional-label">Optional</span><select id="nutritionTrainingFocus" name="nutritionTrainingFocus">
+              <option value="">Prefer not to answer</option>
+              <option value="general-fitness">General fitness</option>
+              <option value="strength-training">Strength training</option>
+              <option value="endurance">Endurance</option>
+              <option value="team-sport">Team sport</option>
+              <option value="mixed-training">Mixed training</option>
+            </select></label>
+          </div>
+          <div id="minorWorkoutSupportNotice" class="nutrition-safety-notice" role="note" hidden>
+            Because your body may still be growing, Chef Nova focuses on regular balanced meals and activity support rather than restrictive calorie targets.
+          </div>
+        </section>
+        <section id="desiredWeightSection" class="nutrition-conditional-section" aria-labelledby="desiredWeightTitle" hidden>
+          <h2 id="desiredWeightTitle">Weight Goal Details</h2>
+          <p>These details are optional. Chef Nova will use them only for general estimates and supportive suggestions.</p>
+          <div class="nutrition-unit-fields">
+            <label id="desiredWeightMetricField" for="nutritionDesiredWeightKg" hidden>Desired weight in kilograms <span class="optional-label">Optional</span><input id="nutritionDesiredWeightKg" name="nutritionDesiredWeightKg" type="number" min="20" max="350" step="0.1" inputmode="decimal"></label>
+            <label id="desiredWeightImperialField" for="nutritionDesiredWeightLb" hidden>Desired weight in pounds <span class="optional-label">Optional</span><input id="nutritionDesiredWeightLb" name="nutritionDesiredWeightLb" type="number" min="45" max="800" step="0.1" inputmode="decimal"></label>
+          </div>
+          <label for="nutritionWeightGoalReason">Reason for the goal, optional<textarea id="nutritionWeightGoalReason" name="nutritionWeightGoalReason" rows="3" maxlength="300" placeholder="Share anything you would like Chef Nova to consider."></textarea></label>
+          <label for="nutritionPreferredPace">Preferred pace, optional<select id="nutritionPreferredPace" name="nutritionPreferredPace">
+            <option value="">Select a pace, optional</option>
+            <option value="no-specific-pace">No specific pace</option>
+            <option value="slow-and-gradual">Slow and gradual</option>
+            <option value="discussed-with-healthcare-professional">Discussed with a healthcare professional</option>
+          </select></label>
+          <div id="minorWeightGoalNotice" class="nutrition-safety-notice" role="note" hidden>
+            <p>Because your body may still be growing, Chef Nova will not create a strict calorie deficit or weight-loss target. Consider discussing weight goals with a parent, doctor, or registered dietitian.</p>
+            <p>For teenagers, height and weight need to be interpreted using age- and sex-specific growth patterns by a healthcare professional.</p>
+          </div>
+        </section>
+        <div class="nutrition-form-actions">
+          <button class="button primary" id="saveNutritionProfileButton" type="submit">Save Nutrition Profile</button>
+          <button class="button secondary" id="returnNutritionSetupButton" type="button">Back</button>
+          <button class="button secondary" id="skipNutritionSetupFromFormButton" type="button">Skip for Now</button>
+        </div>
+        <div id="nutritionTargetStatus" class="nutrition-target-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+  <div class="app-shell hidden" id="chefNovaApp" hidden aria-hidden="true">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" data-page="home" aria-label="Chef Nova home">
+        <span class="brand-mark">✦</span><span>Chef <strong>Nova</strong></span>
+      </a>
+      <nav class="main-nav" id="mainNavigation" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" data-page="home" data-nav-item="home"><span>⌂</span> Home</a>
+        <a class="nav-link" href="#recipes" data-page="recipes" data-nav-item="recipes"><span>⌕</span> Find Recipes</a>
+        <a class="nav-link" href="#pantry" data-page="pantry" data-nav-item="pantry"><span>◫</span> Pantry</a>
+        <a class="nav-link" href="#planner" data-page="planner" data-nav-item="mealPlanner"><span>▦</span> Meal Planner</a>
+        <a class="nav-link" href="#favorites" data-page="favorites" data-nav-item="favorites"><span>♡</span> Favorites</a>
+        <a class="nav-link" href="#shopping-list" data-page="shopping-list" data-nav-item="shoppingList"><span>□</span> Shopping List</a>
+        <a class="nav-link" href="#weekly-nutrition" data-page="weekly-nutrition" data-nav-item="weeklyNutrition"><span>◷</span> Weekly Nutrition</a>
+        <a class="nav-link notification-nav-link" href="#notifications" data-page="notifications" data-nav-item="notifications">
+          <span class="notification-bell" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M18 10a6 6 0 0 0-12 0c0 3.4-1.2 5.1-2.1 6.1-.5.6-.1 1.5.7 1.5h14.8c.8 0 1.2-.9.7-1.5-.9-1-2.1-2.7-2.1-6.1Z"></path><path d="M9.6 20a2.6 2.6 0 0 0 4.8 0"></path></svg>
+          </span>
+          Notifications
+          <span class="notification-badge hidden" id="notificationBadge" aria-live="polite" aria-label="Unread notifications">0</span>
+        </a>
+        <a class="nav-link" href="#learn" data-page="learn" data-nav-item="cookingRules"><span>◇</span> Cooking Rules</a>
+        <a class="nav-link" href="#guide" data-page="guide" data-nav-item="instructions"><span>?</span> Instructions</a>
+        <a class="nav-link" href="#account" data-page="account" data-nav-item="profile"><span>◉</span> Profile</a>
+        <button class="nav-action nav-action-primary" type="button" data-dashboard-auth="register" data-nav-item="signup"><span>+</span> Sign Up</button>
+        <button class="nav-action" type="button" data-dashboard-auth="login" data-nav-item="login"><span>↪</span> Log In</button>
+        <button class="nav-action nav-action-warning" id="sidebarExitGuestButton" type="button" data-exit-guest data-nav-item="exitGuest" hidden aria-hidden="true"><span>×</span> Exit Guest Mode</button>
+        <button class="nav-action nav-action-warning" id="sidebarLogoutButton" type="button" data-auth="logout" data-nav-item="logout" hidden aria-hidden="true"><span>×</span> Log Out</button>
+      </nav>
+      <div id="navigationAccountStatus" class="navigation-account-status" aria-live="polite"></div>
+      <div class="sidebar-card">
+        <span class="eyebrow">NOVA NOTE</span>
+        <p>Great meals start with what you already have.</p>
+        <button class="text-button" data-page="pantry">Check your pantry →</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menuButton" aria-label="Open menu">☰</button>
+        <div class="topbar-copy"><span class="status-dot"></span> Your kitchen, organized</div>
+        <div class="account-area" id="accountArea" aria-label="Account and profile"></div>
+      </header>
+      <div id="guestModeBanner" class="guest-mode-banner hidden" role="status" hidden aria-hidden="true">
+        <span>You are using Chef Nova as a guest. Create an account to save your progress.<small>Guest progress is temporary and will not be saved after your session ends.</small></span>
+        <div class="guest-banner-actions">
+          <button class="button primary small" id="guestCreateAccountButton" type="button" data-guest-auth="register">Create Account</button>
+          <button class="button secondary small" id="guestLoginButton" type="button" data-guest-auth="login">Log In</button>
+          <button class="button secondary small" id="guestExitButton" type="button" data-exit-guest>Exit Guest Mode</button>
+        </div>
+      </div>
+
+      <section class="page active" id="home-page" data-page-section="home">
+        <section id="dashboardWelcome" class="dashboard-welcome" aria-labelledby="dashboardWelcomeTitle">
+          <div>
+            <span class="eyebrow">CHEF NOVA DASHBOARD</span>
+            <h1 id="dashboardWelcomeTitle">Chef Nova Dashboard</h1>
+            <p id="dashboardWelcomeMessage">Your cooking assistant is ready.</p>
+            <p id="guestDashboardMessage" class="guest-dashboard-message hidden">Sign up to save your favorites, pantry, meal plans, and progress.</p>
+          </div>
+          <div id="guestDashboardActions" class="dashboard-welcome-actions hidden">
+            <button class="button primary" id="dashboardSignupButton" type="button" data-dashboard-auth="register">Sign Up</button>
+            <button class="button secondary" id="dashboardLoginButton" type="button" data-dashboard-auth="login">Log In</button>
+          </div>
+        </section>
+        <div class="dashboard-stats" id="dashboardStats" aria-label="Chef Nova dashboard summary"></div>
+        <div class="hero dashboard-hero">
+          <div class="hero-copy">
+            <span class="pill">✦ AI-STYLE COOKING, COSMICALLY SIMPLE</span>
+            <h2>Your kitchen.<br>Your universe of <em>flavor.</em></h2>
+            <p>Chef Nova is your intelligent cooking companion—turning pantry ingredients into inspired recipes, organized plans, and more confident meals.</p>
+            <div class="button-row">
+              <button class="button primary" id="homeCreateAccountSection" data-home-auth-item="create-account" data-auth-mode="register">Create Account <span>→</span></button>
+              <button class="button secondary" data-page="recipes">Find Recipes</button>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Featured cooking inspiration">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="plate"><span>🥘</span></div>
+            <div class="float-card float-one"><b>12</b><small>pantry items</small></div>
+            <div class="float-card float-two"><b>Fresh idea</b><small>ready in 25 min</small></div>
+          </div>
+        </div>
+        <div class="section-heading"><div><span class="eyebrow">YOUR KITCHEN AT A GLANCE</span><h2>What would you like to do?</h2></div></div>
+        <div class="feature-grid">
+          <button class="feature-card accent-sage" data-page="recipes"><span class="feature-icon">⌕</span><h3>AI Recipe Finder</h3><p>Find the perfect dish using ingredients you already have.</p><span class="card-link">Start exploring →</span></button>
+          <button class="feature-card accent-peach" data-page="pantry"><span class="feature-icon">◫</span><h3>Manage your pantry</h3><p>Track ingredients, quantities, and what needs using soon.</p><span class="card-link">View pantry →</span></button>
+          <button class="feature-card accent-gold" data-page="planner"><span class="feature-icon">▦</span><h3>Plan your week</h3><p>Build a calm, delicious plan for breakfast, lunch, and dinner.</p><span class="card-link">Plan meals →</span></button>
+        </div>
+      </section>
+
+      <section class="page" id="recipes-page" data-page-section="recipes">
+        <div class="page-heading"><div><span class="eyebrow">AI RECIPE FINDER</span><h1>Cook with what you have.</h1><p>Enter ingredients separated by commas and Chef Nova will rank recipes by best match.</p></div></div>
+        <div class="recipe-finder-panel">
+          <label for="recipeSearch">Ingredients you have</label>
+          <div class="search-row">
+            <input id="recipeSearch" type="search" placeholder="Enter ingredients you have, like chicken, rice, eggs">
+            <button class="button primary" id="recipeSearchButton">Search Recipes</button>
+            <button class="button secondary" id="clearRecipeSearchButton" type="button">Clear Search</button>
+          </div>
+          <div class="recipe-filter-panel">
+            <div class="recipe-filter-grid">
+              <label>Category<select id="recipeCategoryFilter"><option value="All">All meals</option></select></label>
+              <label>Cuisine<select id="recipeCuisineFilter"><option value="All">All cuisines</option></select></label>
+              <label>Difficulty<select id="recipeDifficultyFilter"><option value="All">All difficulties</option></select></label>
+              <label>Maximum Cooking Time<span class="time-input-wrap"><input id="recipeMaxTimeFilter" type="number" min="1" step="1" placeholder="e.g. 30"><span>minutes</span></span></label>
+              <label>Dietary preference<select id="recipeDietaryFilter"><option value="All">All diets</option></select></label>
+            </div>
+            <label class="recipe-check-filter"><input id="hideAllergyRecipesFilter" type="checkbox"> Hide recipes with my allergies</label>
+            <p class="dietary-note">Check ingredient labels and confirm dietary suitability before cooking.</p>
+            <fieldset class="personalized-filter-group" aria-describedby="personalizedFilterLimitations personalizedFilterAvailability">
+              <div class="personalized-filter-heading">
+                <legend>Personalized Filters</legend>
+                <button class="button secondary small" id="clearPersonalizedFiltersButton" type="button">Clear personalized filters</button>
+              </div>
+              <p id="personalizedFilterLimitations" class="personalized-filter-note">Personalized suggestions are based on meals entered in Chef Nova and may not include snacks, drinks, restaurant meals, portion changes, or foods eaten outside the Meal Planner. These filters support meal planning and do not represent precise nutrition needs.</p>
+              <p id="personalizedFilterAvailability" class="personalized-filter-note status-note"></p>
+              <div class="personalized-filter-chips">
+                <label><input type="checkbox" value="fits-nutrition-range" data-personalized-recipe-filter> <span>Fits my nutrition range</span></label>
+                <label><input type="checkbox" value="higher-protein" data-personalized-recipe-filter> <span>Higher protein</span></label>
+                <label><input type="checkbox" value="balanced-meal" data-personalized-recipe-filter> <span>Balanced meal</span></label>
+                <label><input type="checkbox" value="workout-friendly" data-personalized-recipe-filter> <span>Workout-friendly</span></label>
+                <label><input type="checkbox" value="vegetable-rich" data-personalized-recipe-filter> <span>Vegetable-rich</span></label>
+                <label><input type="checkbox" value="higher-fibre" data-personalized-recipe-filter> <span>Higher fibre</span></label>
+                <label><input type="checkbox" value="lower-added-sugar" data-personalized-recipe-filter> <span>Lower added sugar</span></label>
+                <label><input type="checkbox" value="quick-meal" data-personalized-recipe-filter> <span>Quick meal</span></label>
+              </div>
+            </fieldset>
+            <p id="recipeResultStatus" class="recipe-result-status" aria-live="polite"></p>
+          </div>
+        </div>
+        <div id="recipeResults" class="recipe-grid" aria-live="polite"></div>
+        <div class="favorites-area">
+          <div class="section-heading compact"><div><span class="eyebrow">SAVED RECIPES</span><h2>Favorites</h2></div></div>
+          <div id="recipeFinderFavorites" class="recipe-grid"></div>
+        </div>
+      </section>
+
+      <section class="page" id="pantry-page" data-page-section="pantry">
+        <div class="page-heading split"><div><span class="eyebrow">PANTRY TRACKER</span><h1>Know what you have.</h1><p>Track quantities, freshness, and recipe ideas from the ingredients already in your kitchen.</p></div><button class="button primary" id="showPantryForm">+ Add Pantry Item</button></div>
+        <form class="pantry-form" id="pantryForm">
+          <label>Ingredient name<input name="name" required placeholder="Milk"></label>
+          <label>Quantity<input name="quantity" type="number" min="1" step="1" required placeholder="1"></label>
+          <label>Expiration date<input name="expirationDate" type="date" required></label>
+          <label>Category<select name="category" required><option>Dairy</option><option>Meat</option><option>Vegetables</option><option>Fruit</option><option>Grains</option><option>Spices</option><option>Frozen</option><option>Other</option></select></label>
+          <button class="button primary" type="submit">Add Pantry Item</button>
+        </form>
+        <div class="summary-grid" id="pantrySummary"></div>
+        <div id="pantryList" class="pantry-card-grid" aria-live="polite"></div>
+        <div class="pantry-suggestions">
+          <div class="section-heading compact"><div><span class="eyebrow">PANTRY-BASED IDEAS</span><h2>Recipe suggestions</h2></div></div>
+          <div id="pantryRecipeSuggestions" class="suggestion-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="page" id="planner-page" data-page-section="planner">
+        <div class="page-heading split"><div><span class="eyebrow">MEAL PLANNER</span><h1>A delicious week, mapped out.</h1><p>Choose recipes from Chef Nova or type your own meals for breakfast, lunch, and dinner.</p></div><div class="planner-heading-actions"><button class="button primary" id="saveWeeklyPlanButton">Save Weekly Plan</button><button class="button secondary" id="generateMealPlanButton" type="button">Generate Suggested Meal Plan</button><button class="button secondary" id="clearMealPlanButton">Clear Meal Plan</button></div></div>
+        <section class="meal-plan-preferences" aria-labelledby="mealPlanPreferencesTitle">
+          <div class="section-heading compact"><div><span class="eyebrow">OPTIONAL SETTINGS</span><h2 id="mealPlanPreferencesTitle">Meal Plan Preferences</h2><p>These preferences guide suggestions only. Allergies should be entered in your Profile so Chef Nova can apply stronger safety rules.</p></div></div>
+          <div class="meal-preference-grid">
+            <fieldset class="meal-preference-styles">
+              <legend>Preferred meal styles</legend>
+              <label><input type="checkbox" value="quick-meals" data-meal-style-preference> Quick meals</label>
+              <label><input type="checkbox" value="make-ahead-meals" data-meal-style-preference> Make-ahead meals</label>
+              <label><input type="checkbox" value="pantry-friendly" data-meal-style-preference> Pantry-friendly meals</label>
+              <label><input type="checkbox" value="vegetable-rich" data-meal-style-preference> Vegetable-rich meals</label>
+              <label><input type="checkbox" value="higher-protein" data-meal-style-preference> Higher-protein meals</label>
+              <label><input type="checkbox" value="workout-friendly" data-meal-style-preference> Workout-friendly meals</label>
+              <label><input type="checkbox" value="no-preference" data-meal-style-preference> No preference</label>
+            </fieldset>
+            <label>Maximum cooking time<select id="mealPlanMaxTimePreference">
+              <option value="">No preference</option>
+              <option value="15">15 minutes</option>
+              <option value="30">30 minutes</option>
+              <option value="45">45 minutes</option>
+              <option value="60">60 minutes</option>
+            </select></label>
+            <label>Preferred meals or foods<textarea id="mealPlanPreferredFoods" rows="3" placeholder="Chicken, rice bowls, pasta, oatmeal"></textarea></label>
+            <label>Foods to avoid<textarea id="mealPlanFoodsToAvoid" rows="3" placeholder="Mushrooms, spicy food"></textarea></label>
+          </div>
+          <p id="mealPlanPreferenceStatus" class="meal-plan-preference-status" aria-live="polite"></p>
+        </section>
+        <div class="planner-wrap" id="mealPlanner"></div>
+        <div id="mealPlanPreviewRegion" aria-live="polite"></div>
+      </section>
+
+      <section class="page" id="weeklyNutritionPage" data-page-section="weekly-nutrition">
+        <div class="page-heading split"><div><span class="eyebrow">WEEKLY NUTRITION</span><h1>Weekly Nutrition</h1><p>Review the estimated nutrition from the meals in your weekly meal plan.</p><p class="nutrition-note"><span aria-hidden="true">i</span> Nutrition values are estimates based on recipe data and selected servings. Custom meals may not be included.</p><p class="nutrition-safety-message">Body measurements are only one part of health. Chef Nova focuses on balanced meals, variety, activity support, and consistent habits.</p></div><div class="nutrition-history-actions"><button class="button primary" id="saveNutritionHistoryButton">Save This Week</button><button class="button secondary" id="clearNutritionHistoryButton">Clear History</button></div></div>
+        <div id="weeklyNutritionContent" class="weekly-nutrition-wrap" aria-live="polite"></div>
+      </section>
+
+      <section class="page" id="favorites-page" data-page-section="favorites">
+        <div class="page-heading"><div><span class="eyebrow">FAVORITES</span><h1>Favorites</h1><p>Your saved recipes stay here. Open AI Recipe Finder to save more meals.</p></div></div>
+        <div id="favoriteResults" class="favorite-recipe-grid"></div>
+      </section>
+
+      <section class="page" id="shopping-list-page" data-page-section="shopping-list">
+        <div class="page-heading"><div><span class="eyebrow">SHOPPING LIST</span><h1>Shopping List</h1><p>Keep track of recipe ingredients you still need to buy.</p></div></div>
+        <div id="shoppingListContent" class="shopping-list-wrap" aria-live="polite"></div>
+      </section>
+
+      <section class="page" id="notifications-page" data-page-section="notifications">
+        <div class="page-heading split notifications-heading">
+          <div>
+            <span class="eyebrow">CHEF NOVA UPDATES</span>
+            <h1>Notifications</h1>
+            <p>View important updates, reminders, warnings, and activity from Chef Nova.</p>
+          </div>
+          <div class="notification-page-actions">
+            <button class="button secondary" id="markAllNotificationsReadButton" type="button">Mark All as Read</button>
+            <button class="button secondary clear-notifications-button" id="clearNotificationsButton" type="button">Clear All</button>
+          </div>
+        </div>
+        <div class="notifications-shell">
+          <div class="notifications-summary" aria-live="polite">
+            <span>Unread notifications</span>
+            <strong id="notificationsUnreadCount">0</strong>
+          </div>
+          <div class="notification-filters" id="notificationFilters" role="group" aria-label="Filter notifications">
+            <button class="filter-button active" type="button" data-notification-filter="All">All</button>
+            <button class="filter-button" type="button" data-notification-filter="Unread">Unread</button>
+            <button class="filter-button" type="button" data-notification-filter="success">Success</button>
+            <button class="filter-button" type="button" data-notification-filter="error">Error</button>
+            <button class="filter-button" type="button" data-notification-filter="warning">Warning</button>
+            <button class="filter-button" type="button" data-notification-filter="info">Information</button>
+          </div>
+          <div id="notificationList" class="notification-list" role="list" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="page" id="learn-page" data-page-section="learn">
+        <div class="page-heading"><div><span class="eyebrow">COOKING RULES</span><h1>Cooking Rules</h1><p>Simple safety, hygiene, storage, and cooking habits for a calmer kitchen.</p></div></div>
+        <div class="filter-row" id="ruleFilters"></div><div class="learning-grid" id="ruleList"></div>
+      </section>
+
+      <section class="page" id="guide-page" data-page-section="guide">
+        <div class="page-heading guide-heading">
+          <div>
+            <span class="eyebrow">CHEF NOVA HELP CENTER</span>
+            <h1>How to Use Chef Nova</h1>
+            <p>Follow these steps to learn how to use Chef Nova.</p>
+          </div>
+        </div>
+        <div id="instructionsList" class="instruction-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="page" id="account-page" data-page-section="account">
+        <div class="page-heading"><div><span class="eyebrow">MISSION CONTROL</span><h1>Your Chef Nova account.</h1><p>Save your kitchen preferences and keep your cooking journey close.</p></div></div>
+        <div id="accountGuest" class="account-layout">
+          <div class="account-intro-card">
+            <span class="brand-mark large">✦</span><span class="eyebrow">WELCOME ABOARD</span>
+            <h2>Cook like the stars aligned.</h2>
+            <p>Create your personal kitchen profile so Nova can remember your dietary preferences, allergies, and saved cooking data on this device.</p>
+            <div class="account-benefit"><span>01</span><div><b>Your preferences</b><small>Keep dietary needs and allergies in one place.</small></div></div>
+            <div class="account-benefit"><span>02</span><div><b>Your kitchen</b><small>Return to your saved pantry, favorites, and plans.</small></div></div>
+          </div>
+          <div class="account-form-card">
+            <div class="auth-tabs" role="tablist" aria-label="Account options">
+              <button class="auth-tab active" id="loginTab" data-auth-mode="login" role="tab">Login</button>
+              <button class="auth-tab" id="registerTab" data-auth-mode="register" role="tab">Create Account</button>
+            </div>
+            <form id="loginForm" class="account-form" novalidate>
+              <div class="form-heading"><h2>Welcome back</h2><p>Continue your culinary mission.</p></div>
+              <label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+              <label>Password<span class="password-field"><input name="password" type="password" autocomplete="current-password" required placeholder="Your password"><button class="password-toggle" type="button" data-toggle-password aria-pressed="false">Show</button></span></label>
+              <button class="button primary full" type="submit">Login</button><p class="form-message" id="loginMessage" aria-live="polite"></p>
+            </form>
+            <form id="registerForm" class="account-form hidden" novalidate>
+              <div class="form-heading"><h2>Create your account</h2><p>Tell Nova a little about the cook behind the apron.</p></div>
+              <div class="form-grid two"><label>Full name<input name="name" required autocomplete="name" placeholder="Your name"></label><label>Age<input name="age" type="number" min="1" max="120" step="1" required placeholder="Age"></label></div>
+              <label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+              <div class="form-grid two"><label>Password <small>Use at least 8 characters.</small><span class="password-field"><input name="password" type="password" autocomplete="new-password" required minlength="8" placeholder="At least 8 characters"><button class="password-toggle" type="button" data-toggle-password aria-pressed="false">Show</button></span></label><label>Confirm password<span class="password-field"><input name="confirmPassword" type="password" autocomplete="new-password" required minlength="8" placeholder="Re-enter password"><button class="password-toggle" type="button" data-toggle-password aria-pressed="false">Show</button></span></label></div>
+              <div class="form-grid two"><label>Gender<select name="gender" required><option>Prefer not to say</option><option>Female</option><option>Male</option><option>Non-binary</option><option>Other</option></select></label><label>Phone <small>(optional)</small><input name="phone" type="tel" autocomplete="tel" placeholder="Phone number"></label></div>
+              <label>Dietary preference<select name="dietaryPreference" required><option>No preference</option><option>Vegetarian</option><option>Vegan</option><option>Pescatarian</option><option>Halal</option><option>Kosher</option><option>Gluten-free</option><option>Dairy-free</option><option>Other</option></select></label>
+              <label>Allergies<textarea name="allergies" rows="3" required placeholder="List allergies, or write None"></textarea></label>
+              <button class="button primary full" type="submit">Create Account</button><p class="privacy-note">Stored only in this browser using localStorage.</p><p class="form-message" id="registerMessage" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+        <div id="accountProfile" class="profile-panel hidden" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+  <div class="guest-upgrade-modal-backdrop hidden" id="guestUpgradeModal" hidden aria-hidden="true">
+    <section class="guest-upgrade-modal" role="dialog" aria-modal="true" aria-labelledby="guestUpgradeTitle" aria-describedby="guestUpgradeDescription">
+      <div class="guest-upgrade-modal-heading">
+        <span class="rule-badge">Account Created</span>
+        <h2 id="guestUpgradeTitle">Save Guest Progress?</h2>
+      </div>
+      <p id="guestUpgradeDescription">Would you like to save your temporary guest progress to your new account?</p>
+      <div class="guest-upgrade-modal-actions">
+        <button class="button primary" id="saveGuestProgressButton" type="button">Save My Guest Progress</button>
+        <button class="button secondary" id="startFreshGuestProgressButton" type="button">Start Fresh</button>
+      </div>
+    </section>
+  </div>
+  <div class="exit-guest-modal-backdrop hidden" id="exitGuestModeModal" hidden aria-hidden="true">
+    <section class="exit-guest-modal" role="dialog" aria-modal="true" aria-labelledby="exitGuestModeTitle" aria-describedby="exitGuestModeDescription">
+      <div class="exit-guest-modal-heading">
+        <span class="rule-badge">Guest Mode</span>
+        <h2 id="exitGuestModeTitle">Exit Guest Mode</h2>
+      </div>
+      <p id="exitGuestModeDescription">Temporary guest progress will be lost. Exit guest mode?</p>
+      <div class="exit-guest-modal-actions">
+        <button class="button secondary" id="cancelExitGuestModeButton" type="button">Cancel</button>
+        <button class="button primary danger-button" id="confirmExitGuestModeButton" type="button">Exit Guest Mode</button>
+      </div>
+    </section>
+  </div>
+  <div class="account-required-modal-backdrop hidden" id="accountRequiredModal" hidden aria-hidden="true">
+    <div class="account-required-modal" role="dialog" aria-modal="true" aria-labelledby="accountRequiredTitle" aria-describedby="accountRequiredMessage">
+      <button class="account-required-close" id="accountRequiredClose" type="button" tabindex="-1" aria-label="Close account required popup">×</button>
+      <div class="account-required-heading">
+        <span class="rule-badge">Account Required</span>
+        <h2 id="accountRequiredTitle">Create an account to save your progress.</h2>
+      </div>
+      <p id="accountRequiredMessage">Create an account to save your progress.</p>
+      <div class="account-required-actions">
+        <button class="button primary" id="accountRequiredSignup" type="button">Sign Up</button>
+        <button class="button secondary" id="accountRequiredLogin" type="button">Log In</button>
+        <button class="button secondary" id="accountRequiredContinue" type="button">Continue as Guest</button>
+      </div>
+    </div>
+  </div>
+  <div class="rule-modal-backdrop hidden" id="ruleModal" aria-hidden="true">
+    <div class="rule-modal" role="dialog" aria-modal="true" aria-labelledby="ruleModalTitle">
+      <button class="rule-modal-close" id="ruleModalClose" type="button" aria-label="Close rule details">×</button>
+      <div id="ruleModalContent"></div>
+    </div>
+  </div>
+  <div class="favorite-modal-backdrop hidden" id="favoriteRecipeModal" aria-hidden="true">
+    <div class="favorite-modal" role="dialog" aria-modal="true" aria-labelledby="favoriteRecipeModalTitle">
+      <button class="favorite-modal-close" id="favoriteRecipeModalClose" type="button" aria-label="Close cooking steps">×</button>
+      <div id="favoriteRecipeModalContent"></div>
+    </div>
+  </div>
+  <div class="instruction-modal-backdrop hidden" id="instructionModal" aria-hidden="true">
+    <div class="instruction-modal" role="dialog" aria-modal="true" aria-labelledby="instructionModalTitle">
+      <button class="instruction-modal-close" id="instructionModalClose" type="button" aria-label="Close instructions">×</button>
+      <div id="instructionModalContent"></div>
+    </div>
+  </div>
+  <div class="recipe-detail-modal-backdrop hidden" id="recipeDetailModal" aria-hidden="true">
+    <div class="recipe-detail-modal" role="dialog" aria-modal="true" aria-labelledby="recipeDetailModalTitle">
+      <button class="recipe-detail-modal-close" id="recipeDetailModalClose" type="button" aria-label="Close recipe details">×</button>
+      <div id="recipeDetailModalContent"></div>
+    </div>
+  </div>
+  <div class="notification-confirm-backdrop hidden" id="notificationConfirmModal" aria-hidden="true">
+    <div class="notification-confirm-modal" role="dialog" aria-modal="true" aria-labelledby="notificationConfirmTitle">
+      <button class="notification-confirm-close" id="notificationConfirmClose" type="button" aria-label="Close confirmation">×</button>
+      <h2 id="notificationConfirmTitle">Clear all notifications?</h2>
+      <p>Are you sure you want to clear all notifications? This action cannot be undone.</p>
+      <div class="notification-confirm-actions">
+        <button class="button secondary" id="cancelClearNotificationsButton" type="button">Cancel</button>
+        <button class="button primary" id="confirmClearNotificationsButton" type="button">Clear All</button>
+      </div>
+    </div>
+  </div>
+  <div class="nutrition-confirm-backdrop hidden" id="nutritionConfirmModal" aria-hidden="true">
+    <div class="nutrition-confirm-modal" role="dialog" aria-modal="true" aria-labelledby="nutritionConfirmTitle" aria-describedby="nutritionConfirmMessage">
+      <button class="nutrition-confirm-close" id="nutritionConfirmClose" type="button" aria-label="Close nutrition confirmation">×</button>
+      <h2 id="nutritionConfirmTitle">Confirm Nutrition Change</h2>
+      <p id="nutritionConfirmMessage">Confirm this nutrition profile change.</p>
+      <div class="nutrition-confirm-actions">
+        <button class="button secondary" id="cancelNutritionConfirmButton" type="button">Cancel</button>
+        <button class="button primary danger-button" id="confirmNutritionActionButton" type="button">Confirm</button>
+      </div>
+    </div>
+  </div>
+  <div class="meal-plan-generation-backdrop hidden" id="mealPlanGenerationModal" aria-hidden="true">
+    <div class="meal-plan-generation-modal" role="dialog" aria-modal="true" aria-labelledby="mealPlanGenerationTitle">
+      <button class="meal-plan-generation-close" id="mealPlanGenerationClose" type="button" aria-label="Close meal plan generator">×</button>
+      <div id="mealPlanGenerationContent"></div>
+    </div>
+  </div>
+  <script src="rules.js"></script>
+  <script src="data/recipes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,616 @@
+[
+  {
+    "id": "stage-1-visual-keyboard",
+    "status": "draft",
+    "featureFlagKeys": [
+      "accessibility.font-scaling",
+      "accessibility.text-spacing",
+      "accessibility.high-contrast",
+      "accessibility.reduced-motion",
+      "accessibility.readability-display",
+      "accessibility.large-buttons",
+      "accessibility.one-instruction-mode",
+      "accessibility.keyboard-focus-foundation"
+    ],
+    "localeFlagKeys": [],
+    "releaseOwner": "release-owner",
+    "technicalOwner": "technical-owner",
+    "accessibilityOwner": "accessibility-owner",
+    "languageOwners": [],
+    "targetApplicationVersion": "static-local",
+    "targetCommit": "",
+    "entryCriteria": [
+      {
+        "id": "stage-1-visual-keyboard-entry-tests",
+        "category": "automated-tests",
+        "description": "Required automated tests pass.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-1-visual-keyboard-entry-privacy",
+        "category": "privacy",
+        "description": "Privacy payloads exclude private user content and disability inference.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-1-visual-keyboard-entry-monitoring",
+        "category": "monitoring",
+        "description": "Privacy-safe monitoring route is available.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-1-visual-keyboard-entry-rollback",
+        "category": "rollback",
+        "description": "Rollback procedure is rehearsed or marked blocked as release risk.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      }
+    ],
+    "exitCriteria": [
+      {
+        "id": "stage-1-visual-keyboard-exit-manual",
+        "category": "manual-testing",
+        "description": "Required manual checks are completed.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-1-visual-keyboard-exit-at",
+        "category": "assistive-technology",
+        "description": "Required assistive-technology checks pass where available.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-1-visual-keyboard-exit-sev",
+        "category": "support-readiness",
+        "description": "No open Severity 0 or Severity 1 defects remain.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-1-visual-keyboard-exit-rollback",
+        "category": "rollback",
+        "description": "Production-like rollback drill passes.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      }
+    ],
+    "rollbackCriteria": [
+      {
+        "id": "stage-1-visual-keyboard-rollback-settings",
+        "category": "rollback",
+        "description": "Rollback preserves user settings and confirmed data.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-1-visual-keyboard-rollback-session",
+        "category": "rollback",
+        "description": "Active cooking state and timers survive safe flag changes.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-1-visual-keyboard-rollback-fallback",
+        "category": "rollback",
+        "description": "Manual fallback remains available.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      }
+    ],
+    "evidenceReferences": [],
+    "openIssueIds": [],
+    "notes": "Infrastructure record only. Not a production rollout."
+  },
+  {
+    "id": "stage-2-independent-cooking",
+    "status": "draft",
+    "featureFlagKeys": [
+      "cooking.recipe-tts",
+      "cooking.accessible-timers",
+      "cooking.voice-navigation",
+      "pantry.speech-entry",
+      "privacy.microphone-controls"
+    ],
+    "localeFlagKeys": [],
+    "releaseOwner": "release-owner",
+    "technicalOwner": "technical-owner",
+    "accessibilityOwner": "accessibility-owner",
+    "languageOwners": [],
+    "targetApplicationVersion": "static-local",
+    "targetCommit": "",
+    "entryCriteria": [
+      {
+        "id": "stage-2-independent-cooking-entry-tests",
+        "category": "automated-tests",
+        "description": "Required automated tests pass.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-2-independent-cooking-entry-privacy",
+        "category": "privacy",
+        "description": "Privacy payloads exclude private user content and disability inference.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-2-independent-cooking-entry-monitoring",
+        "category": "monitoring",
+        "description": "Privacy-safe monitoring route is available.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-2-independent-cooking-entry-rollback",
+        "category": "rollback",
+        "description": "Rollback procedure is rehearsed or marked blocked as release risk.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-2-independent-cooking-entry-voice",
+        "category": "privacy",
+        "description": "Step 70 voice safety protections pass.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      }
+    ],
+    "exitCriteria": [
+      {
+        "id": "stage-2-independent-cooking-exit-manual",
+        "category": "manual-testing",
+        "description": "Required manual checks are completed.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-2-independent-cooking-exit-at",
+        "category": "assistive-technology",
+        "description": "Required assistive-technology checks pass where available.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-2-independent-cooking-exit-sev",
+        "category": "support-readiness",
+        "description": "No open Severity 0 or Severity 1 defects remain.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-2-independent-cooking-exit-rollback",
+        "category": "rollback",
+        "description": "Production-like rollback drill passes.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      }
+    ],
+    "rollbackCriteria": [
+      {
+        "id": "stage-2-independent-cooking-rollback-settings",
+        "category": "rollback",
+        "description": "Rollback preserves user settings and confirmed data.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-2-independent-cooking-rollback-session",
+        "category": "rollback",
+        "description": "Active cooking state and timers survive safe flag changes.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-2-independent-cooking-rollback-fallback",
+        "category": "rollback",
+        "description": "Manual fallback remains available.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      }
+    ],
+    "evidenceReferences": [],
+    "openIssueIds": [],
+    "notes": "Infrastructure record only. Not a production rollout."
+  },
+  {
+    "id": "stage-3-initial-language-bridge",
+    "status": "draft",
+    "featureFlagKeys": [
+      "language.bridge",
+      "language.ingredient-lexicon",
+      "language.cooking-glossary",
+      "language.bilingual-rendering",
+      "language.locale.en-CA",
+      "language.locale.fr-CA",
+      "language.locale.zh-Hans",
+      "language.locale.zh-Hant"
+    ],
+    "localeFlagKeys": [
+      "language.locale.en-CA",
+      "language.locale.fr-CA",
+      "language.locale.zh-Hans",
+      "language.locale.zh-Hant"
+    ],
+    "releaseOwner": "release-owner",
+    "technicalOwner": "technical-owner",
+    "accessibilityOwner": "accessibility-owner",
+    "languageOwners": [
+      "language-owner"
+    ],
+    "targetApplicationVersion": "static-local",
+    "targetCommit": "",
+    "entryCriteria": [
+      {
+        "id": "stage-3-initial-language-bridge-entry-tests",
+        "category": "automated-tests",
+        "description": "Required automated tests pass.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-3-initial-language-bridge-entry-privacy",
+        "category": "privacy",
+        "description": "Privacy payloads exclude private user content and disability inference.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-3-initial-language-bridge-entry-monitoring",
+        "category": "monitoring",
+        "description": "Privacy-safe monitoring route is available.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-3-initial-language-bridge-entry-rollback",
+        "category": "rollback",
+        "description": "Rollback procedure is rehearsed or marked blocked as release risk.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-3-initial-language-bridge-entry-language",
+        "category": "language-review",
+        "description": "Required fluent human review and Step 67 publication gates pass.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      }
+    ],
+    "exitCriteria": [
+      {
+        "id": "stage-3-initial-language-bridge-exit-manual",
+        "category": "manual-testing",
+        "description": "Required manual checks are completed.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-3-initial-language-bridge-exit-at",
+        "category": "assistive-technology",
+        "description": "Required assistive-technology checks pass where available.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-3-initial-language-bridge-exit-sev",
+        "category": "support-readiness",
+        "description": "No open Severity 0 or Severity 1 defects remain.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-3-initial-language-bridge-exit-rollback",
+        "category": "rollback",
+        "description": "Production-like rollback drill passes.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      }
+    ],
+    "rollbackCriteria": [
+      {
+        "id": "stage-3-initial-language-bridge-rollback-settings",
+        "category": "rollback",
+        "description": "Rollback preserves user settings and confirmed data.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-3-initial-language-bridge-rollback-session",
+        "category": "rollback",
+        "description": "Active cooking state and timers survive safe flag changes.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-3-initial-language-bridge-rollback-fallback",
+        "category": "rollback",
+        "description": "Manual fallback remains available.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      }
+    ],
+    "evidenceReferences": [],
+    "openIssueIds": [],
+    "notes": "Infrastructure record only. Not a production rollout."
+  },
+  {
+    "id": "stage-4-expanded-languages",
+    "status": "draft",
+    "featureFlagKeys": [
+      "language.rtl-support",
+      "language.translated-media",
+      "language.multilingual-speech-commands",
+      "language.locale.ar",
+      "language.locale.pa",
+      "language.locale.es",
+      "language.locale.uk",
+      "language.locale.vi",
+      "language.locale.ko",
+      "language.speech-commands.en-CA",
+      "language.speech-commands.fr-CA",
+      "language.speech-commands.zh-Hans",
+      "language.speech-commands.zh-Hant",
+      "language.speech-commands.ar",
+      "language.speech-commands.pa",
+      "language.speech-commands.es",
+      "language.speech-commands.uk",
+      "language.speech-commands.vi",
+      "language.speech-commands.ko"
+    ],
+    "localeFlagKeys": [
+      "language.locale.ar",
+      "language.locale.pa",
+      "language.locale.es",
+      "language.locale.uk",
+      "language.locale.vi",
+      "language.locale.ko"
+    ],
+    "releaseOwner": "release-owner",
+    "technicalOwner": "technical-owner",
+    "accessibilityOwner": "accessibility-owner",
+    "languageOwners": [
+      "language-owner"
+    ],
+    "targetApplicationVersion": "static-local",
+    "targetCommit": "",
+    "entryCriteria": [
+      {
+        "id": "stage-4-expanded-languages-entry-tests",
+        "category": "automated-tests",
+        "description": "Required automated tests pass.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-4-expanded-languages-entry-privacy",
+        "category": "privacy",
+        "description": "Privacy payloads exclude private user content and disability inference.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-4-expanded-languages-entry-monitoring",
+        "category": "monitoring",
+        "description": "Privacy-safe monitoring route is available.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-4-expanded-languages-entry-rollback",
+        "category": "rollback",
+        "description": "Rollback procedure is rehearsed or marked blocked as release risk.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-4-expanded-languages-entry-language",
+        "category": "language-review",
+        "description": "Required fluent human review and Step 67 publication gates pass.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      }
+    ],
+    "exitCriteria": [
+      {
+        "id": "stage-4-expanded-languages-exit-manual",
+        "category": "manual-testing",
+        "description": "Required manual checks are completed.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-4-expanded-languages-exit-at",
+        "category": "assistive-technology",
+        "description": "Required assistive-technology checks pass where available.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-4-expanded-languages-exit-sev",
+        "category": "support-readiness",
+        "description": "No open Severity 0 or Severity 1 defects remain.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-4-expanded-languages-exit-rollback",
+        "category": "rollback",
+        "description": "Production-like rollback drill passes.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      }
+    ],
+    "rollbackCriteria": [
+      {
+        "id": "stage-4-expanded-languages-rollback-settings",
+        "category": "rollback",
+        "description": "Rollback preserves user settings and confirmed data.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-4-expanded-languages-rollback-session",
+        "category": "rollback",
+        "description": "Active cooking state and timers survive safe flag changes.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      },
+      {
+        "id": "stage-4-expanded-languages-rollback-fallback",
+        "category": "rollback",
+        "description": "Manual fallback remains available.",
+        "required": true,
+        "status": "not-evaluated",
+        "evidenceReferences": [],
+        "issueIds": [],
+        "notes": ""
+      }
+    ],
+    "evidenceReferences": [],
+    "openIssueIds": [],
+    "notes": "Infrastructure record only. Not a production rollout."
+  }
+]

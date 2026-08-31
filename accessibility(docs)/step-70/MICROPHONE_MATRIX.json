@@ -1,0 +1,174 @@
+{
+  "step": 70,
+  "title": "Privacy, Permissions, and Voice Safety",
+  "generatedAt": "2026-08-19T07:04:46.982Z",
+  "totals": {
+    "total": 18,
+    "pass": 13,
+    "blocked": 5
+  },
+  "rows": [
+    {
+      "id": "S70-001",
+      "type": "automated",
+      "scenario": "Explicit microphone activation required",
+      "setup": "User activation false",
+      "expected": "Voice session is rejected and microphone remains idle.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-002",
+      "type": "automated",
+      "scenario": "Supported microphone session lifecycle",
+      "setup": "User activation true with account/session binding",
+      "expected": "Session enters ready/listening and records no raw audio.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-003",
+      "type": "automated",
+      "scenario": "Permission denied fallback",
+      "setup": "Recognition permission denial",
+      "expected": "Accessible fallback displays keyboard and Pantry form controls.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-004",
+      "type": "manual-real-browser",
+      "scenario": "Permission accepted in real browser",
+      "setup": "Real user grants microphone permission",
+      "expected": "Visible listening indicator appears with Stop Listening control.",
+      "status": "blocked",
+      "evidence": "Requires real browser microphone permission not available in this run."
+    },
+    {
+      "id": "S70-005",
+      "type": "manual-real-browser",
+      "scenario": "Permission denied in real browser",
+      "setup": "Real user denies microphone permission",
+      "expected": "No prompt loop; fallback remains available.",
+      "status": "blocked",
+      "evidence": "Requires real browser permission prompt not available in this run."
+    },
+    {
+      "id": "S70-006",
+      "type": "manual-real-browser",
+      "scenario": "Permission revoked while listening",
+      "setup": "Browser permission revoked mid-session",
+      "expected": "Session stops, tracks release, transcript clears.",
+      "status": "blocked",
+      "evidence": "Requires real browser permission controls not available in this run."
+    },
+    {
+      "id": "S70-007",
+      "type": "automated",
+      "scenario": "Speech API unavailable",
+      "setup": "No SpeechRecognition API",
+      "expected": "Fallback is rendered without storing transcript.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-008",
+      "type": "automated",
+      "scenario": "Device unavailable and disconnected errors",
+      "setup": "No input device and disconnected device errors",
+      "expected": "Failure reasons are deterministic.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-009",
+      "type": "automated",
+      "scenario": "Network and language recognition errors",
+      "setup": "Network interruption, no speech, unsupported language",
+      "expected": "Safe failure reason is shown and no retry loop starts.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-010",
+      "type": "automated",
+      "scenario": "Late callback isolation",
+      "setup": "Account, session, and epoch mismatch callbacks",
+      "expected": "Callbacks are ignored after account/session changes.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-011",
+      "type": "automated",
+      "scenario": "Pantry voice phrase review",
+      "setup": "Two cans of tomatoes in the pantry.",
+      "expected": "Editable draft shows tomatoes, quantity 2, cans, can size required, no auto-save.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-012",
+      "type": "automated",
+      "scenario": "Protected command policy",
+      "setup": "Delete allergy, remove diet, discard food, freeze food, complete meal, cancel meal, delete Pantry data",
+      "expected": "Voice opens pending visible review only.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-013",
+      "type": "automated",
+      "scenario": "Generic confirmation rejection",
+      "setup": "Voice says yes/ok/confirm",
+      "expected": "Sensitive action does not execute.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-014",
+      "type": "automated",
+      "scenario": "Privacy-safe event payload",
+      "setup": "Voice telemetry/audit payloads",
+      "expected": "No raw audio, transcript, food, allergy, diet, meal, waste, or disability inference is stored.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-015",
+      "type": "automated",
+      "scenario": "Legacy voice storage migration",
+      "setup": "Legacy transcript/audio keys exist",
+      "expected": "Keys are removed idempotently.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-016",
+      "type": "automated",
+      "scenario": "No disability inference",
+      "setup": "Accessibility preferences and voice fallback use",
+      "expected": "No disability diagnosis or inferred disability field is created.",
+      "status": "pass",
+      "evidence": "tests/cook-before-it-spoils-step-70-voice-safety.test.js"
+    },
+    {
+      "id": "S70-017",
+      "type": "manual-assistive-tech",
+      "scenario": "Screen reader fallback announcement",
+      "setup": "Screen reader user starts unavailable voice entry",
+      "expected": "Fallback heading, text, and buttons are announced clearly.",
+      "status": "blocked",
+      "evidence": "Requires real screen reader/browser combination not available in this run."
+    },
+    {
+      "id": "S70-018",
+      "type": "manual-mobile",
+      "scenario": "Mobile device disconnection",
+      "setup": "Phone microphone changes or disconnects",
+      "expected": "Session stops and fallback remains usable.",
+      "status": "blocked",
+      "evidence": "Requires mobile hardware not available in this run."
+    }
+  ]
+}

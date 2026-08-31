@@ -1,0 +1,879 @@
+{
+  "configurationVersion": "step-71-local-rollout-v1",
+  "applicationVersion": "static-local",
+  "cohortSaltVersion": "chef-nova-rollout-salt-v1",
+  "flags": {
+    "accessibility.font-scaling": {
+      "key": "accessibility.font-scaling",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "accessibility-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "accessibility.text-spacing": {
+      "key": "accessibility.text-spacing",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "accessibility-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "accessibility.high-contrast": {
+      "key": "accessibility.high-contrast",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "accessibility-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "accessibility.reduced-motion": {
+      "key": "accessibility.reduced-motion",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "accessibility-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "accessibility.readability-display": {
+      "key": "accessibility.readability-display",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "accessibility-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "accessibility.large-buttons": {
+      "key": "accessibility.large-buttons",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "accessibility-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "accessibility.one-instruction-mode": {
+      "key": "accessibility.one-instruction-mode",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "accessibility-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "accessibility.keyboard-focus-foundation": {
+      "key": "accessibility.keyboard-focus-foundation",
+      "status": "general-availability",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "accessibility-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "cooking.recipe-tts": {
+      "key": "cooking.recipe-tts",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "accessibility-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "cooking.accessible-timers": {
+      "key": "cooking.accessible-timers",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "timer-accessibility-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "cooking.voice-navigation": {
+      "key": "cooking.voice-navigation",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "voice-privacy-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "accessibility.keyboard-focus-foundation",
+        "privacy.microphone-controls"
+      ]
+    },
+    "pantry.speech-entry": {
+      "key": "pantry.speech-entry",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "voice-privacy-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "privacy.microphone-controls",
+        "manual.pantry-form"
+      ]
+    },
+    "privacy.microphone-controls": {
+      "key": "privacy.microphone-controls",
+      "status": "general-availability",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "voice-privacy-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "language.bridge": {
+      "key": "language.bridge",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "step65.localization",
+        "step67.content-review",
+        "content.source-approved"
+      ]
+    },
+    "language.ingredient-lexicon": {
+      "key": "language.ingredient-lexicon",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "language.cooking-glossary": {
+      "key": "language.cooking-glossary",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": []
+    },
+    "language.bilingual-rendering": {
+      "key": "language.bilingual-rendering",
+      "status": "internal-testing",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.bridge",
+        "language.cooking-glossary"
+      ]
+    },
+    "language.rtl-support": {
+      "key": "language.rtl-support",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.bridge",
+        "locale.rtl-approved"
+      ]
+    },
+    "language.translated-media": {
+      "key": "language.translated-media",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.bridge",
+        "media.reviewed-captions",
+        "media.reviewed-transcript"
+      ]
+    },
+    "language.multilingual-speech-commands": {
+      "key": "language.multilingual-speech-commands",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "privacy.microphone-controls",
+        "language.bridge",
+        "step70.voice-command-policy"
+      ]
+    },
+    "language.locale.en-CA": {
+      "key": "language.locale.en-CA",
+      "status": "general-availability",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "source-en-ca-v1",
+      "locale": "en-CA",
+      "dependencies": []
+    },
+    "language.locale.fr-CA": {
+      "key": "language.locale.fr-CA",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "fr-CA",
+      "dependencies": []
+    },
+    "language.locale.zh-Hans": {
+      "key": "language.locale.zh-Hans",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "zh-Hans",
+      "dependencies": []
+    },
+    "language.locale.zh-Hant": {
+      "key": "language.locale.zh-Hant",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "zh-Hant",
+      "dependencies": []
+    },
+    "language.locale.ar": {
+      "key": "language.locale.ar",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "ar",
+      "dependencies": []
+    },
+    "language.locale.pa": {
+      "key": "language.locale.pa",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "pa",
+      "dependencies": []
+    },
+    "language.locale.es": {
+      "key": "language.locale.es",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "es",
+      "dependencies": []
+    },
+    "language.locale.uk": {
+      "key": "language.locale.uk",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "uk",
+      "dependencies": []
+    },
+    "language.locale.vi": {
+      "key": "language.locale.vi",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "vi",
+      "dependencies": []
+    },
+    "language.locale.ko": {
+      "key": "language.locale.ko",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "ko",
+      "dependencies": []
+    },
+    "language.speech-commands.en-CA": {
+      "key": "language.speech-commands.en-CA",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.multilingual-speech-commands",
+        "language.locale.en-CA"
+      ]
+    },
+    "language.speech-commands.fr-CA": {
+      "key": "language.speech-commands.fr-CA",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.multilingual-speech-commands",
+        "language.locale.fr-CA"
+      ]
+    },
+    "language.speech-commands.zh-Hans": {
+      "key": "language.speech-commands.zh-Hans",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.multilingual-speech-commands",
+        "language.locale.zh-Hans"
+      ]
+    },
+    "language.speech-commands.zh-Hant": {
+      "key": "language.speech-commands.zh-Hant",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.multilingual-speech-commands",
+        "language.locale.zh-Hant"
+      ]
+    },
+    "language.speech-commands.ar": {
+      "key": "language.speech-commands.ar",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.multilingual-speech-commands",
+        "language.locale.ar"
+      ]
+    },
+    "language.speech-commands.pa": {
+      "key": "language.speech-commands.pa",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.multilingual-speech-commands",
+        "language.locale.pa"
+      ]
+    },
+    "language.speech-commands.es": {
+      "key": "language.speech-commands.es",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.multilingual-speech-commands",
+        "language.locale.es"
+      ]
+    },
+    "language.speech-commands.uk": {
+      "key": "language.speech-commands.uk",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.multilingual-speech-commands",
+        "language.locale.uk"
+      ]
+    },
+    "language.speech-commands.vi": {
+      "key": "language.speech-commands.vi",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.multilingual-speech-commands",
+        "language.locale.vi"
+      ]
+    },
+    "language.speech-commands.ko": {
+      "key": "language.speech-commands.ko",
+      "status": "draft",
+      "rolloutPercentage": 0,
+      "killSwitch": {
+        "active": false,
+        "owner": "language-owner",
+        "reason": "",
+        "activatedAt": ""
+      },
+      "allowedEnvironments": [
+        "development",
+        "test"
+      ],
+      "allowedAccountIds": [],
+      "allowedOrganizationIds": [],
+      "approvedContentVersion": "",
+      "locale": "",
+      "dependencies": [
+        "language.multilingual-speech-commands",
+        "language.locale.ko"
+      ]
+    }
+  },
+  "serverControlledFlags": [
+    "cooking.voice-navigation",
+    "pantry.speech-entry",
+    "privacy.microphone-controls",
+    "language.bridge",
+    "language.translated-media",
+    "language.rtl-support",
+    "language.locale.en-CA",
+    "language.locale.fr-CA",
+    "language.locale.zh-Hans",
+    "language.locale.zh-Hant",
+    "language.locale.ar",
+    "language.locale.pa",
+    "language.locale.es",
+    "language.locale.uk",
+    "language.locale.vi",
+    "language.locale.ko"
+  ]
+}

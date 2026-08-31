@@ -1,0 +1,453 @@
+{
+  "generatedAt": "2026-08-31T01:08:41.942Z",
+  "applicationCommit": "not-a-git-repository",
+  "applicationVersion": "Chef Nova static local app",
+  "deploymentOrBuild": "local-static-52d2393550d6a066",
+  "totalRows": 76,
+  "passedRows": 54,
+  "failedRows": 0,
+  "blockedRows": 14,
+  "notRunRows": 8,
+  "notApplicableRows": 0,
+  "passPercentageIncludingBlocked": 71.05,
+  "passPercentageExcludingBlockedNotRunAndNotApplicable": 100,
+  "byBrowser": {
+    "Node.js static analysis": {
+      "total": 65,
+      "pass": 54,
+      "fail": 0,
+      "blocked": 3,
+      "not-run": 8,
+      "not-applicable": 0
+    },
+    "Firefox": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 1,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Chrome": {
+      "total": 4,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 4,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Microsoft Edge": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 1,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Safari": {
+      "total": 4,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 4,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "In-app browser": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 1,
+      "not-run": 0,
+      "not-applicable": 0
+    }
+  },
+  "byAssistiveTechnology": {
+    "none": {
+      "total": 70,
+      "pass": 54,
+      "fail": 0,
+      "blocked": 8,
+      "not-run": 8,
+      "not-applicable": 0
+    },
+    "NVDA": {
+      "total": 2,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 2,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "JAWS": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 1,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "VoiceOver": {
+      "total": 2,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 2,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "TalkBack": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 1,
+      "not-run": 0,
+      "not-applicable": 0
+    }
+  },
+  "byLocale": {
+    "en-CA": {
+      "total": 74,
+      "pass": 54,
+      "fail": 0,
+      "blocked": 12,
+      "not-run": 8,
+      "not-applicable": 0
+    },
+    "fr-CA": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 1,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "ar": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 1,
+      "not-run": 0,
+      "not-applicable": 0
+    }
+  },
+  "byFeature": {
+    "Structure": {
+      "total": 3,
+      "pass": 3,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Display matrix": {
+      "total": 28,
+      "pass": 28,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Language": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Language Bridge": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Measurement localization": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Food safety": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Offline cooking": {
+      "total": 3,
+      "pass": 2,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 1,
+      "not-applicable": 0
+    },
+    "Instructional video": {
+      "total": 2,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 1,
+      "not-applicable": 0
+    },
+    "Content review": {
+      "total": 2,
+      "pass": 2,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Accessibility Recovery": {
+      "total": 2,
+      "pass": 2,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Feedback privacy": {
+      "total": 2,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 1,
+      "not-applicable": 0
+    },
+    "Speech Pantry": {
+      "total": 3,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 2,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Reduced motion": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Keyboard and focus": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Dialogs": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Announcements": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "ARIA hygiene": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Feature fallback": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Allergy warnings": {
+      "total": 2,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 1,
+      "not-applicable": 0
+    },
+    "Touch targets": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Low-Bandwidth Mode": {
+      "total": 2,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 1,
+      "not-applicable": 0
+    },
+    "Language Recovery": {
+      "total": 1,
+      "pass": 1,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Screen-reader cooking": {
+      "total": 6,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 6,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "French localization": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 1,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Simplified Chinese Language Bridge": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 1,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Arabic right-to-left": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 1,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Mobile orientation": {
+      "total": 2,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 2,
+      "not-run": 0,
+      "not-applicable": 0
+    },
+    "Keyboard-only cooking": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 1,
+      "not-applicable": 0
+    },
+    "Timer accessibility": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 1,
+      "not-applicable": 0
+    },
+    "Representative user testing": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 1,
+      "not-applicable": 0
+    },
+    "Browser smoke": {
+      "total": 1,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 1,
+      "not-run": 0,
+      "not-applicable": 0
+    }
+  },
+  "bySeverity": {
+    "high": {
+      "total": 48,
+      "pass": 40,
+      "fail": 0,
+      "blocked": 5,
+      "not-run": 3,
+      "not-applicable": 0
+    },
+    "critical": {
+      "total": 20,
+      "pass": 6,
+      "fail": 0,
+      "blocked": 9,
+      "not-run": 5,
+      "not-applicable": 0
+    },
+    "medium": {
+      "total": 8,
+      "pass": 8,
+      "fail": 0,
+      "blocked": 0,
+      "not-run": 0,
+      "not-applicable": 0
+    }
+  },
+  "byDeviceType": {
+    "desktop": {
+      "total": 70,
+      "pass": 54,
+      "fail": 0,
+      "blocked": 8,
+      "not-run": 8,
+      "not-applicable": 0
+    },
+    "mobile": {
+      "total": 6,
+      "pass": 0,
+      "fail": 0,
+      "blocked": 6,
+      "not-run": 0,
+      "not-applicable": 0
+    }
+  },
+  "openDefects": [],
+  "retestsRequired": [],
+  "manualTestsRemaining": [
+    "ALM-DESKTOP-NVDA-001",
+    "ALM-DESKTOP-NVDA-002",
+    "ALM-DESKTOP-JAWS-001",
+    "ALM-DESKTOP-VO-001",
+    "ALM-MOBILE-VO-001",
+    "ALM-MOBILE-TB-001",
+    "ALM-LANGUAGE-FR-001",
+    "ALM-LANGUAGE-ZH-001",
+    "ALM-RTL-AR-001",
+    "ALM-MOBILE-IPHONE-ORIENTATION-001",
+    "ALM-MOBILE-ANDROID-ORIENTATION-001",
+    "ALM-MOBILE-IPHONE-DICTATION-001",
+    "ALM-MOBILE-ANDROID-VOICE-001",
+    "ALM-COOKING-KB-001",
+    "ALM-OFFLINE-E2E-001",
+    "ALM-LOW-BANDWIDTH-E2E-001",
+    "ALM-ALLERGY-MATRIX-001",
+    "ALM-VIDEO-MATRIX-001",
+    "ALM-TIMER-MATRIX-001",
+    "ALM-FEEDBACK-CATEGORIES-001",
+    "ALM-USER-TESTING-001",
+    "ALM-BROWSER-REAL-001"
+  ],
+  "userTestingSessionsCompleted": 0
+}

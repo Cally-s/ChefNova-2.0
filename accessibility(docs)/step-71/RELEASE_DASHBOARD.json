@@ -1,0 +1,382 @@
+{
+  "generatedAt": "2026-08-20T05:01:51.247Z",
+  "configurationVersion": "step-71-local-rollout-v1",
+  "stages": [
+    {
+      "id": "stage-1-visual-keyboard",
+      "status": "draft",
+      "features": [
+        {
+          "key": "accessibility.font-scaling",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "accessibility-owner"
+        },
+        {
+          "key": "accessibility.text-spacing",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "accessibility-owner"
+        },
+        {
+          "key": "accessibility.high-contrast",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "accessibility-owner"
+        },
+        {
+          "key": "accessibility.reduced-motion",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "accessibility-owner"
+        },
+        {
+          "key": "accessibility.readability-display",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "accessibility-owner"
+        },
+        {
+          "key": "accessibility.large-buttons",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "accessibility-owner"
+        },
+        {
+          "key": "accessibility.one-instruction-mode",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "accessibility-owner"
+        },
+        {
+          "key": "accessibility.keyboard-focus-foundation",
+          "enabledByDefault": false,
+          "flagStatus": "general-availability",
+          "owner": "accessibility-owner"
+        }
+      ],
+      "entryCriteriaStatus": {
+        "total": 4,
+        "required": 4,
+        "passed": 0,
+        "blocked": 0,
+        "failed": 0
+      },
+      "exitCriteriaStatus": {
+        "total": 4,
+        "required": 4,
+        "passed": 0,
+        "blocked": 0,
+        "failed": 0
+      },
+      "openDefects": [],
+      "currentIncidents": [],
+      "monitoringStatus": "infrastructure-only",
+      "rollbackReadiness": {
+        "total": 3,
+        "required": 3,
+        "passed": 0,
+        "blocked": 0,
+        "failed": 0
+      },
+      "lastManualTestDate": "",
+      "lastLanguageReviewDate": "",
+      "lastAssistiveTechnologyReviewDate": "",
+      "currentReleaseDecision": "blocked-or-draft"
+    },
+    {
+      "id": "stage-2-independent-cooking",
+      "status": "draft",
+      "features": [
+        {
+          "key": "cooking.recipe-tts",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "accessibility-owner"
+        },
+        {
+          "key": "cooking.accessible-timers",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "timer-accessibility-owner"
+        },
+        {
+          "key": "cooking.voice-navigation",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "voice-privacy-owner"
+        },
+        {
+          "key": "pantry.speech-entry",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "voice-privacy-owner"
+        },
+        {
+          "key": "privacy.microphone-controls",
+          "enabledByDefault": false,
+          "flagStatus": "general-availability",
+          "owner": "voice-privacy-owner"
+        }
+      ],
+      "entryCriteriaStatus": {
+        "total": 5,
+        "required": 5,
+        "passed": 0,
+        "blocked": 0,
+        "failed": 0
+      },
+      "exitCriteriaStatus": {
+        "total": 4,
+        "required": 4,
+        "passed": 0,
+        "blocked": 0,
+        "failed": 0
+      },
+      "openDefects": [],
+      "currentIncidents": [],
+      "monitoringStatus": "infrastructure-only",
+      "rollbackReadiness": {
+        "total": 3,
+        "required": 3,
+        "passed": 0,
+        "blocked": 0,
+        "failed": 0
+      },
+      "lastManualTestDate": "",
+      "lastLanguageReviewDate": "",
+      "lastAssistiveTechnologyReviewDate": "",
+      "currentReleaseDecision": "blocked-or-draft"
+    },
+    {
+      "id": "stage-3-initial-language-bridge",
+      "status": "draft",
+      "features": [
+        {
+          "key": "language.bridge",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.ingredient-lexicon",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.cooking-glossary",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.bilingual-rendering",
+          "enabledByDefault": false,
+          "flagStatus": "internal-testing",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.locale.en-CA",
+          "enabledByDefault": false,
+          "flagStatus": "general-availability",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.locale.fr-CA",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.locale.zh-Hans",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.locale.zh-Hant",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        }
+      ],
+      "entryCriteriaStatus": {
+        "total": 5,
+        "required": 5,
+        "passed": 0,
+        "blocked": 0,
+        "failed": 0
+      },
+      "exitCriteriaStatus": {
+        "total": 4,
+        "required": 4,
+        "passed": 0,
+        "blocked": 0,
+        "failed": 0
+      },
+      "openDefects": [],
+      "currentIncidents": [],
+      "monitoringStatus": "infrastructure-only",
+      "rollbackReadiness": {
+        "total": 3,
+        "required": 3,
+        "passed": 0,
+        "blocked": 0,
+        "failed": 0
+      },
+      "lastManualTestDate": "",
+      "lastLanguageReviewDate": "",
+      "lastAssistiveTechnologyReviewDate": "",
+      "currentReleaseDecision": "blocked-or-draft"
+    },
+    {
+      "id": "stage-4-expanded-languages",
+      "status": "draft",
+      "features": [
+        {
+          "key": "language.rtl-support",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.translated-media",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.multilingual-speech-commands",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.locale.ar",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.locale.pa",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.locale.es",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.locale.uk",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.locale.vi",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.locale.ko",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.speech-commands.en-CA",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.speech-commands.fr-CA",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.speech-commands.zh-Hans",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.speech-commands.zh-Hant",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.speech-commands.ar",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.speech-commands.pa",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.speech-commands.es",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.speech-commands.uk",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.speech-commands.vi",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        },
+        {
+          "key": "language.speech-commands.ko",
+          "enabledByDefault": false,
+          "flagStatus": "draft",
+          "owner": "language-owner"
+        }
+      ],
+      "entryCriteriaStatus": {
+        "total": 5,
+        "required": 5,
+        "passed": 0,
+        "blocked": 0,
+        "failed": 0
+      },
+      "exitCriteriaStatus": {
+        "total": 4,
+        "required": 4,
+        "passed": 0,
+        "blocked": 0,
+        "failed": 0
+      },
+      "openDefects": [],
+      "currentIncidents": [],
+      "monitoringStatus": "infrastructure-only",
+      "rollbackReadiness": {
+        "total": 3,
+        "required": 3,
+        "passed": 0,
+        "blocked": 0,
+        "failed": 0
+      },
+      "lastManualTestDate": "",
+      "lastLanguageReviewDate": "",
+      "lastAssistiveTechnologyReviewDate": "",
+      "currentReleaseDecision": "blocked-or-draft"
+    }
+  ]
+}

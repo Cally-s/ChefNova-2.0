@@ -1,0 +1,82 @@
+{
+  "Monday": {
+    "Breakfast": {
+      "recipeId": "omelette",
+      "recipeName": "Omelette",
+      "servings": 1,
+      "nutritionAvailable": true
+    },
+    "Lunch": {
+      "recipeId": "chicken-wrap",
+      "recipeName": "Chicken Wrap",
+      "servings": 1,
+      "nutritionAvailable": true
+    },
+    "Dinner": {
+      "recipeId": "pasta",
+      "recipeName": "Pasta",
+      "servings": 1,
+      "nutritionAvailable": true
+    }
+  },
+  "Tuesday": {
+    "Breakfast": {
+      "recipeId": "pancakes",
+      "recipeName": "Pancakes",
+      "servings": 1,
+      "nutritionAvailable": true
+    },
+    "Lunch": {
+      "recipeId": "caesar-salad",
+      "recipeName": "Caesar Salad",
+      "servings": 1,
+      "nutritionAvailable": true
+    },
+    "Dinner": {
+      "recipeId": "chicken-curry",
+      "recipeName": "Chicken Curry",
+      "servings": 1,
+      "nutritionAvailable": true
+    }
+  },
+  "Wednesday": {
+    "Breakfast": null,
+    "Lunch": null,
+    "Dinner": null
+  },
+  "Thursday": {
+    "Breakfast": null,
+    "Lunch": null,
+    "Dinner": null
+  },
+  "Friday": {
+    "Breakfast": null,
+    "Lunch": null,
+    "Dinner": {
+      "recipeId": "salmon-bowl",
+      "recipeName": "Salmon Bowl",
+      "servings": 1,
+      "nutritionAvailable": true
+    }
+  },
+  "Saturday": {
+    "Breakfast": null,
+    "Lunch": null,
+    "Dinner": null
+  },
+  "Sunday": {
+    "Breakfast": {
+      "recipeId": "smoothie-bowl",
+      "recipeName": "Smoothie Bowl",
+      "servings": 1,
+      "nutritionAvailable": true
+    },
+    "Lunch": null,
+    "Dinner": {
+      "recipeId": "vegetable-soup",
+      "recipeName": "Vegetable Soup",
+      "servings": 1,
+      "nutritionAvailable": true
+    }
+  }
+}

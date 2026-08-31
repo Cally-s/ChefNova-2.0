@@ -1,0 +1,1341 @@
+{
+  "ingredientSchemaVersion": 1,
+  "categories": [
+    "produce",
+    "grains",
+    "legumes",
+    "meat",
+    "seafood",
+    "eggs",
+    "dairy",
+    "dairy-alternatives",
+    "bakery",
+    "canned-goods",
+    "frozen",
+    "oils-fats",
+    "herbs-spices",
+    "condiments-sauces",
+    "sweeteners",
+    "beverages",
+    "prepared-foods",
+    "other"
+  ],
+  "units": [
+    "mg",
+    "g",
+    "kg",
+    "oz",
+    "lb",
+    "ml",
+    "l",
+    "tsp",
+    "tbsp",
+    "cup",
+    "fl-oz",
+    "each",
+    "clove",
+    "slice",
+    "piece",
+    "fillet",
+    "sheet",
+    "head",
+    "stalk",
+    "sprig",
+    "bunch",
+    "can",
+    "jar",
+    "bottle",
+    "package",
+    "bag",
+    "box",
+    "carton",
+    "pinch",
+    "dash",
+    "handful"
+  ],
+  "measurementStatuses": [
+    "exact",
+    "range",
+    "approximate",
+    "unquantified",
+    "to-taste",
+    "as-needed",
+    "package-size-unknown",
+    "unresolved"
+  ],
+  "ingredients": [
+    {
+      "id": "apple",
+      "name": "Apple",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "baking-powder",
+      "name": "Baking powder",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "bakery",
+      "pantryStaple": true,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "balsamic-vinegar",
+      "name": "Balsamic vinegar",
+      "aliases": [],
+      "baseUnit": "ml",
+      "category": "condiments-sauces",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "banana",
+      "name": "Banana",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "basil",
+      "name": "Basil",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "fresh-herbs"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "beef",
+      "name": "Beef",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "meat",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "beef"
+      ],
+      "commonForms": [
+        "cooked"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "bell-pepper",
+      "name": "Bell pepper",
+      "aliases": [
+        "pepper",
+        "sweet pepper"
+      ],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "berries",
+      "name": "Berries",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [
+        "frozen"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "black-beans",
+      "name": "Black beans",
+      "aliases": [
+        "black bean"
+      ],
+      "baseUnit": "g",
+      "category": "legumes",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "legumes"
+      ],
+      "commonForms": [
+        "canned"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "black-pepper",
+      "name": "Black pepper",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": true,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "bakery",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "breadcrumbs",
+      "name": "Breadcrumbs",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "bakery",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "broccoli",
+      "name": "Broccoli",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "dairy",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "cooking-fat"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "caesar-dressing",
+      "name": "Caesar dressing",
+      "aliases": [],
+      "baseUnit": "ml",
+      "category": "condiments-sauces",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots",
+      "aliases": [
+        "carrot"
+      ],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "celery",
+      "name": "Celery",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "cheddar",
+      "name": "Cheddar",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "dairy",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "cheese"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "chia-seeds",
+      "name": "Chia seeds",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "other",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "meat",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "poultry"
+      ],
+      "commonForms": [
+        "cooked"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "chicken-stock",
+      "name": "Chicken stock",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "other",
+      "pantryStaple": true,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas",
+      "aliases": [
+        "chickpea",
+        "garbanzo bean",
+        "garbanzo beans",
+        "canned chickpeas"
+      ],
+      "baseUnit": "g",
+      "category": "legumes",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "legumes"
+      ],
+      "commonForms": [
+        "canned"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "chili-flakes",
+      "name": "Chili flakes",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": true,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "chili-powder",
+      "name": "Chili powder",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": true,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "chives",
+      "name": "Chives",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "fresh-herbs"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "chocolate-chips",
+      "name": "Chocolate chips",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "sweeteners",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "fresh-herbs"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": true,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "coconut-milk",
+      "name": "Coconut milk",
+      "aliases": [
+        "canned coconut milk"
+      ],
+      "baseUnit": "ml",
+      "category": "dairy-alternatives",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "plant-milk"
+      ],
+      "commonForms": [
+        "canned"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "corn",
+      "name": "Corn",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [
+        "frozen"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "dairy",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "croutons",
+      "name": "Croutons",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "bakery",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": true,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "curry-powder",
+      "name": "Curry powder",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": true,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "dried-cranberries",
+      "name": "Dried cranberries",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "aliases": [
+        "eggs"
+      ],
+      "baseUnit": "each",
+      "category": "eggs",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "flour",
+      "name": "Flour",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "grains",
+      "pantryStaple": true,
+      "substituteGroups": [],
+      "commonForms": [
+        "dry"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "granola",
+      "name": "Granola",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "grains",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "green-beans",
+      "name": "Green beans",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "green-onion",
+      "name": "Green onion",
+      "aliases": [
+        "scallion",
+        "scallions",
+        "spring onion"
+      ],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "sweeteners",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "sweetener"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "ice",
+      "name": "Ice",
+      "aliases": [],
+      "baseUnit": "ml",
+      "category": "beverages",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [
+        "frozen"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "legumes",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "legumes"
+      ],
+      "commonForms": [
+        "dry"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "leafy-greens"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "lime",
+      "name": "Lime",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "macaroni",
+      "name": "Macaroni",
+      "aliases": [
+        "macaroni pasta"
+      ],
+      "baseUnit": "g",
+      "category": "grains",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "pasta"
+      ],
+      "commonForms": [
+        "dry"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "mango",
+      "name": "Mango",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [
+        "frozen"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "maple-syrup",
+      "name": "Maple syrup",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "sweeteners",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "sweetener"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "mayonnaise",
+      "name": "Mayonnaise",
+      "aliases": [],
+      "baseUnit": "ml",
+      "category": "condiments-sauces",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "dairy",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "milk"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "mozzarella",
+      "name": "Mozzarella",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "dairy",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "cheese"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "mustard",
+      "name": "Mustard",
+      "aliases": [],
+      "baseUnit": "ml",
+      "category": "condiments-sauces",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "noodles",
+      "name": "Noodles",
+      "aliases": [
+        "noodle"
+      ],
+      "baseUnit": "g",
+      "category": "grains",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "noodles"
+      ],
+      "commonForms": [
+        "dry"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "nori",
+      "name": "Nori",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "other",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "oats",
+      "name": "Oats",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "grains",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "grains"
+      ],
+      "commonForms": [
+        "dry"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "olive-oil",
+      "name": "Olive oil",
+      "aliases": [
+        "extra virgin olive oil"
+      ],
+      "baseUnit": "ml",
+      "category": "oils-fats",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "cooking-oil"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "olives",
+      "name": "Olives",
+      "aliases": [],
+      "baseUnit": "ml",
+      "category": "condiments-sauces",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "paprika",
+      "name": "Paprika",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": true,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "parmesan",
+      "name": "Parmesan",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "dairy",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "cheese"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "fresh-herbs"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "pasta",
+      "name": "Pasta",
+      "aliases": [
+        "plain pasta"
+      ],
+      "baseUnit": "g",
+      "category": "grains",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "pasta"
+      ],
+      "commonForms": [
+        "dry"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "peanut-butter",
+      "name": "Peanut butter",
+      "aliases": [
+        "peanut spread"
+      ],
+      "baseUnit": "ml",
+      "category": "condiments-sauces",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "nut-butter"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "peas",
+      "name": "Peas",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [
+        "frozen"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "pickle",
+      "name": "Pickle",
+      "aliases": [],
+      "baseUnit": "ml",
+      "category": "condiments-sauces",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "pizza-dough",
+      "name": "Pizza dough",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "bakery",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes",
+      "aliases": [
+        "potato"
+      ],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "quinoa",
+      "name": "Quinoa",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "grains",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "grains"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "aliases": [
+        "cooked rice"
+      ],
+      "baseUnit": "g",
+      "category": "grains",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "rice"
+      ],
+      "commonForms": [
+        "dry"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "romaine",
+      "name": "Romaine",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "leafy-greens"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "salmon",
+      "name": "Salmon",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "seafood",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "seafood"
+      ],
+      "commonForms": [
+        "cooked"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "salsa",
+      "name": "Salsa",
+      "aliases": [],
+      "baseUnit": "ml",
+      "category": "condiments-sauces",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "salsa"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "salt",
+      "name": "Salt",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "herbs-spices",
+      "pantryStaple": true,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "sesame-oil",
+      "name": "Sesame oil",
+      "aliases": [],
+      "baseUnit": "ml",
+      "category": "oils-fats",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "cooking-oil"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "sesame-seeds",
+      "name": "Sesame seeds",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "other",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp",
+      "aliases": [
+        "prawns"
+      ],
+      "baseUnit": "g",
+      "category": "seafood",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "seafood"
+      ],
+      "commonForms": [
+        "cooked"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "sour-cream",
+      "name": "Sour cream",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "dairy",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "soy-sauce",
+      "name": "Soy sauce",
+      "aliases": [
+        "soya sauce"
+      ],
+      "baseUnit": "ml",
+      "category": "condiments-sauces",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "soy-sauce"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "spaghetti",
+      "name": "Spaghetti",
+      "aliases": [
+        "spaghetti pasta"
+      ],
+      "baseUnit": "g",
+      "category": "grains",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "pasta"
+      ],
+      "commonForms": [
+        "dry"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "leafy-greens"
+      ],
+      "commonForms": [],
+      "notes": "",
+      "freezerGuidancePolicyIds": [
+        "freeze-guidance::spinach::raw-fresh::v1"
+      ],
+      "freezerGuidanceSummary": {
+        "currentApprovedPolicyId": null,
+        "status": "review-required"
+      }
+    },
+    {
+      "id": "sugar",
+      "name": "Sugar",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "sweeteners",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "sweetener"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "sweet-potato",
+      "name": "Sweet potato",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "tahini",
+      "name": "Tahini",
+      "aliases": [],
+      "baseUnit": "ml",
+      "category": "condiments-sauces",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "legumes",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "plant-protein"
+      ],
+      "commonForms": [
+        "cooked"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "aliases": [
+        "tomatoes"
+      ],
+      "baseUnit": "g",
+      "category": "produce",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "tomato-sauce",
+      "name": "Tomato sauce",
+      "aliases": [],
+      "baseUnit": "ml",
+      "category": "condiments-sauces",
+      "pantryStaple": true,
+      "substituteGroups": [
+        "tomato-sauce"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "tortilla",
+      "name": "Tortilla",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "bakery",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "turkey",
+      "name": "Turkey",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "meat",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "poultry"
+      ],
+      "commonForms": [
+        "cooked"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "vegetable-stock",
+      "name": "Vegetable stock",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "other",
+      "pantryStaple": true,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "walnuts",
+      "name": "Walnuts",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "other",
+      "pantryStaple": false,
+      "substituteGroups": [],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "dairy",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "yogurt"
+      ],
+      "commonForms": [],
+      "notes": ""
+    },
+    {
+      "id": "yogurt-sauce",
+      "name": "Yogurt sauce",
+      "aliases": [],
+      "baseUnit": "g",
+      "category": "dairy",
+      "pantryStaple": false,
+      "substituteGroups": [
+        "yogurt-sauce"
+      ],
+      "commonForms": [],
+      "notes": ""
+    }
+  ]
+}

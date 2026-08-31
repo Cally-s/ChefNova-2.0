@@ -1,0 +1,194 @@
+window.CHEF_NOVA_INGREDIENT_SUBSTITUTIONS = {
+  "substitutionSchemaVersion": 1,
+  "reviewedAt": "2026-08-10",
+  "groups": [
+    {
+      "id": "substitution-group-chicken",
+      "originalIngredientId": "chicken",
+      "alternatives": [
+        {
+          "ruleId": "chicken-to-lentils-cooked-cup-manual",
+          "ingredientId": "lentils",
+          "allowedRecipeTypes": ["soup", "stew", "curry", "pasta", "bowl"],
+          "allowedRecipeIds": ["chicken-curry"],
+          "excludedRecipeIds": ["chicken-wrap", "caesar-salad"],
+          "quantityRule": { "type": "manual-required" },
+          "originalForms": ["cooked"],
+          "allowedAlternativeForms": ["dry"],
+          "resultingForm": "dry",
+          "preparationAdjustments": ["Cook lentils before combining with the remaining recipe."],
+          "cookingAdjustments": {
+            "additionalTimeMinutes": 15,
+            "requiredApplianceIds": ["stove"],
+            "removedApplianceIds": [],
+            "preparationMethodId": "stovetop-lentil-variant"
+          },
+          "additionalIngredients": [],
+          "removedIngredients": [],
+          "allowAutomaticPlanning": false,
+          "requiresUserConfirmation": true,
+          "impactSummary": {
+            "flavour": "noticeable-change",
+            "texture": "noticeable-change",
+            "nutrition": "changes"
+          },
+          "notes": "Recipe uses cups of cooked chicken, so Chef Nova requires a reviewed quantity before automatic application.",
+          "active": true,
+          "version": 1
+        },
+        {
+          "ruleId": "chicken-to-eggs-fried-rice-recipe-specific",
+          "ingredientId": "egg",
+          "allowedRecipeTypes": ["rice"],
+          "allowedRecipeIds": ["fried-rice"],
+          "excludedRecipeIds": [],
+          "quantityRule": {
+            "type": "recipe-specific",
+            "rulesByRecipeId": {
+              "fried-rice": { "type": "per-serving", "quantityPerServing": 1, "unit": "each" }
+            }
+          },
+          "originalForms": ["cooked", null],
+          "allowedAlternativeForms": [null],
+          "resultingForm": null,
+          "preparationAdjustments": ["Scramble eggs separately before folding them into the rice."],
+          "cookingAdjustments": {
+            "additionalTimeMinutes": 5,
+            "requiredApplianceIds": ["stove"],
+            "removedApplianceIds": [],
+            "preparationMethodId": "stovetop-egg-rice-variant"
+          },
+          "additionalIngredients": [],
+          "removedIngredients": [],
+          "allowAutomaticPlanning": false,
+          "requiresUserConfirmation": true,
+          "impactSummary": {
+            "flavour": "noticeable-change",
+            "texture": "noticeable-change",
+            "nutrition": "changes"
+          },
+          "notes": "Allowed only where the recipe has a reviewed egg quantity.",
+          "active": true,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "id": "substitution-group-tofu",
+      "originalIngredientId": "tofu",
+      "alternatives": [
+        {
+          "ruleId": "tofu-to-lentils-fixed-grams",
+          "ingredientId": "lentils",
+          "allowedRecipeTypes": ["noodles", "bowl", "dinner", "vegan"],
+          "allowedRecipeIds": ["tofu-noodles"],
+          "excludedRecipeIds": [],
+          "quantityRule": {
+            "type": "fixed",
+            "quantity": 150,
+            "unit": "g"
+          },
+          "originalForms": ["cooked"],
+          "allowedAlternativeForms": ["dry"],
+          "resultingForm": "dry",
+          "preparationAdjustments": ["Cook lentils until tender before adding them to the noodles."],
+          "cookingAdjustments": {
+            "additionalTimeMinutes": 15,
+            "requiredApplianceIds": ["stove"],
+            "removedApplianceIds": [],
+            "preparationMethodId": "stovetop-lentil-noodle-variant"
+          },
+          "additionalIngredients": [],
+          "removedIngredients": [],
+          "allowAutomaticPlanning": true,
+          "requiresUserConfirmation": false,
+          "impactSummary": {
+            "flavour": "noticeable-change",
+            "texture": "noticeable-change",
+            "nutrition": "changes"
+          },
+          "notes": "Reviewed fixed amount for the tofu noodle recipe because cup-to-gram conversion is not assumed.",
+          "active": true,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "id": "substitution-group-beef",
+      "originalIngredientId": "beef",
+      "alternatives": [
+        {
+          "ruleId": "beef-to-turkey-stir-fry-cup-ratio",
+          "ingredientId": "turkey",
+          "allowedRecipeTypes": ["stir-fry", "dinner"],
+          "allowedRecipeIds": ["beef-stir-fry"],
+          "excludedRecipeIds": [],
+          "quantityRule": {
+            "type": "ratio",
+            "ratio": 1,
+            "inputUnit": "cup",
+            "outputUnit": "cup"
+          },
+          "originalForms": ["cooked"],
+          "allowedAlternativeForms": ["cooked"],
+          "resultingForm": "cooked",
+          "preparationAdjustments": ["Cook turkey fully before combining it with the vegetables and sauce."],
+          "cookingAdjustments": {
+            "additionalTimeMinutes": 0,
+            "requiredApplianceIds": ["stove"],
+            "removedApplianceIds": [],
+            "preparationMethodId": "stovetop-turkey-stir-fry-variant"
+          },
+          "additionalIngredients": [],
+          "removedIngredients": [],
+          "allowAutomaticPlanning": true,
+          "requiresUserConfirmation": false,
+          "impactSummary": {
+            "flavour": "mild-change",
+            "texture": "mild-change",
+            "nutrition": "changes"
+          },
+          "notes": "Price comparison is available only when turkey has a usable selected price.",
+          "active": true,
+          "version": 1
+        }
+      ]
+    },
+    {
+      "id": "substitution-group-dairy-milk",
+      "originalIngredientId": "milk",
+      "alternatives": [
+        {
+          "ruleId": "milk-to-oats-manual-review",
+          "ingredientId": "oats",
+          "allowedRecipeTypes": ["breakfast", "desserts"],
+          "allowedRecipeIds": ["pancakes"],
+          "excludedRecipeIds": [],
+          "quantityRule": { "type": "manual-required" },
+          "originalForms": [null],
+          "allowedAlternativeForms": ["dry"],
+          "resultingForm": "dry",
+          "preparationAdjustments": ["A reviewed batter adjustment is required before this can be applied."],
+          "cookingAdjustments": {
+            "additionalTimeMinutes": 0,
+            "requiredApplianceIds": [],
+            "removedApplianceIds": [],
+            "preparationMethodId": null
+          },
+          "additionalIngredients": [],
+          "removedIngredients": [],
+          "allowAutomaticPlanning": false,
+          "requiresUserConfirmation": true,
+          "impactSummary": {
+            "flavour": "noticeable-change",
+            "texture": "noticeable-change",
+            "nutrition": "changes"
+          },
+          "notes": "Manual review prevents oat-milk style substitutions from being treated as milk aliases.",
+          "active": true,
+          "version": 1
+        }
+      ]
+    }
+  ]
+};

@@ -1,0 +1,279 @@
+{
+  "freezerGuidanceCatalogueVersion": 1,
+  "policyResolutionVersion": 1,
+  "reviewWorkflowVersion": 1,
+  "reviewedAt": "2026-08-12",
+  "sourceHierarchy": [
+    "exact-product-package-instructions",
+    "health-canada-or-cfia",
+    "canadian-public-health",
+    "other-national-food-safety-authority",
+    "reviewed-university-extension-preservation-source",
+    "peer-reviewed-or-formally-reviewed-preservation-reference",
+    "policy-unavailable"
+  ],
+  "policies": [
+    {
+      "schemaVersion": 1,
+      "policyId": "freeze-guidance::prepared-leftover-category::leftover-cooked-dish::cooked::v1",
+      "policyVersion": 1,
+      "subject": {
+        "entityType": "prepared-leftover-category",
+        "entityId": "leftover-cooked-dish",
+        "categoryId": "leftover-cooked-dish",
+        "form": "cooked"
+      },
+      "applicability": {
+        "itemKinds": ["prepared-leftover"],
+        "allowedPackageStates": ["not-applicable", "opened", "resealed"],
+        "allowedStorageLocations": ["refrigerator"],
+        "excludedPreservationStates": ["frozen", "thawed"],
+        "requiredSafetyDecision": "eligible"
+      },
+      "suitability": {
+        "status": "conditionally-recommended",
+        "canFreeze": true,
+        "recommendationBasis": "reviewed-leftover-quality-guidance-plus-current-item-safety",
+        "reasonCodes": ["requires-current-safety-eligibility", "quality-window-not-safety-deadline"]
+      },
+      "preparation": {
+        "summary": "Cool, portion, package, and label the leftover before freezing.",
+        "steps": [
+          { "stepId": "cool-cooked-food", "actionType": "cool-cooked-food", "instruction": "Cool cooked leftovers promptly before storage.", "required": true, "policyReferenceId": "evidence::hc-leftovers::cooling-storage" },
+          { "stepId": "portion", "actionType": "portion", "instruction": "Portion leftovers before freezing when practical.", "required": false, "policyReferenceId": "evidence::hc-leftovers::freezer-quality" },
+          { "stepId": "package", "actionType": "package", "instruction": "Use a freezer container or freezer bag.", "required": true, "policyReferenceId": "evidence::hc-leftovers::freezer-quality" },
+          { "stepId": "label", "actionType": "label", "instruction": "Label the food name and frozen date.", "required": true, "policyReferenceId": "evidence::hc-leftovers::freezer-quality" }
+        ],
+        "washingRequired": null,
+        "dryingRequired": null,
+        "cuttingInstructions": null,
+        "portionBeforeFreezing": true,
+        "preCookRequired": null
+      },
+      "blanching": {
+        "requirement": "not-applicable",
+        "method": null,
+        "duration": null,
+        "durationUnit": null,
+        "coolingMethod": null,
+        "drainingInstructions": null,
+        "policyReferenceId": null
+      },
+      "packaging": {
+        "containerTypes": ["freezer-bag", "airtight-container"],
+        "removeAir": true,
+        "headspace": null,
+        "portioningGuidance": "Portion before freezing when practical.",
+        "labelRequired": true,
+        "labelFields": ["food-name", "frozen-date"]
+      },
+      "texture": {
+        "changeExpected": null,
+        "severity": "unknown",
+        "description": null,
+        "qualityLimitations": []
+      },
+      "recommendedUsesAfterFreezing": [
+        { "useCategoryId": "soup", "suitability": "conditional" },
+        { "useCategoryId": "curry", "suitability": "conditional" },
+        { "useCategoryId": "dinner", "suitability": "conditional" }
+      ],
+      "qualityWindow": {
+        "status": "reviewed",
+        "minimumDuration": 2,
+        "maximumDuration": 3,
+        "durationUnit": "months",
+        "storageTemperatureC": -18,
+        "basis": "quality",
+        "userFacingLabel": "Best quality for approximately 2 to 3 months"
+      },
+      "thawing": {
+        "status": "unknown",
+        "approvedMethodIds": [],
+        "prohibitedMethodIds": ["room-temperature"],
+        "instructions": null,
+        "useImmediatelyAfterThawing": null
+      },
+      "cookFromFrozen": {
+        "status": "unknown",
+        "allowedMethodIds": [],
+        "instructions": null
+      },
+      "refreezing": {
+        "status": "policy-unavailable",
+        "policyReferenceId": null
+      },
+      "contraindications": ["current-item-safety-exclusion", "unknown-current-quantity", "unresolved-freezer-condition"],
+      "evidence": [
+        {
+          "evidenceId": "evidence::hc-leftovers::freezer-quality",
+          "authority": "Health Canada",
+          "sourceTitle": "Food safety tips for leftovers",
+          "jurisdiction": "Canada",
+          "sourceType": "government-guidance",
+          "sourceLocation": "https://www.canada.ca/en/general-food-safety-tips/food-safety-tips-leftovers.html",
+          "publishedAt": null,
+          "lastReviewedAt": "2026-08-12",
+          "retrievedAt": "2026-08-12",
+          "supportsFields": ["suitability.canFreeze", "qualityWindow.minimumDuration", "qualityWindow.maximumDuration", "qualityWindow.basis", "packaging.labelRequired"],
+          "reviewerNotes": "Mapped from Chef Nova's existing reviewed leftover freezer-quality policy baseline."
+        },
+        {
+          "evidenceId": "evidence::hc-leftovers::cooling-storage",
+          "authority": "Health Canada",
+          "sourceTitle": "Storing leftovers",
+          "jurisdiction": "Canada",
+          "sourceType": "government-guidance",
+          "sourceLocation": "https://www.canada.ca/en/services/health/publications/food-nutrition/infographic-leftovers.html",
+          "publishedAt": null,
+          "lastReviewedAt": "2026-08-12",
+          "retrievedAt": "2026-08-12",
+          "supportsFields": ["preparation.steps", "applicability.requiredSafetyDecision"],
+          "reviewerNotes": "Supports leftover storage context; current item safety still comes from Food-Safety Guardrails."
+        }
+      ],
+      "review": {
+        "status": "approved-with-limitations",
+        "generatedBy": "human",
+        "generatedAt": "2026-08-12T00:00:00.000Z",
+        "submittedForReviewAt": "2026-08-12T00:00:00.000Z",
+        "approvedAt": "2026-08-12T00:00:00.000Z",
+        "approvedByUserId": "chef-nova-content-review",
+        "reviewerRole": "food-safety-reviewer",
+        "secondReviewerUserId": null,
+        "reviewDueAt": "2027-08-12",
+        "contentHash": "freezer-guidance-content::leftover-cooked-dish::v1",
+        "approvalContentHash": "freezer-guidance-content::leftover-cooked-dish::v1",
+        "reviewHistory": [
+          { "action": "approved-with-limitations", "actorRole": "food-safety-reviewer", "at": "2026-08-12T00:00:00.000Z", "note": "Approved only as general leftover freezing suitability. It never overrides current item safety." }
+        ]
+      },
+      "lifecycle": {
+        "status": "active",
+        "effectiveAt": "2026-08-12T00:00:00.000Z",
+        "retiredAt": null,
+        "supersededByPolicyId": null
+      },
+      "metadata": {
+        "createdAt": "2026-08-12T00:00:00.000Z",
+        "updatedAt": "2026-08-12T00:00:00.000Z"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "policyId": "freeze-guidance::spinach::raw-fresh::v1",
+      "policyVersion": 1,
+      "subject": {
+        "entityType": "ingredient",
+        "entityId": "spinach",
+        "categoryId": "leafy-greens",
+        "form": "raw-fresh"
+      },
+      "applicability": {
+        "itemKinds": ["ingredient-lot"],
+        "allowedPackageStates": ["unopened", "opened"],
+        "allowedStorageLocations": ["refrigerator"],
+        "excludedPreservationStates": ["frozen", "thawed"],
+        "requiredSafetyDecision": "eligible"
+      },
+      "suitability": {
+        "status": "review-required",
+        "canFreeze": null,
+        "recommendationBasis": null,
+        "reasonCodes": ["ai-draft-quarantined", "field-level-evidence-required", "blanching-requirement-not-reviewed"]
+      },
+      "preparation": {
+        "summary": null,
+        "steps": [],
+        "washingRequired": null,
+        "dryingRequired": null,
+        "cuttingInstructions": null,
+        "portionBeforeFreezing": null,
+        "preCookRequired": null
+      },
+      "blanching": {
+        "requirement": "review-required",
+        "method": null,
+        "duration": null,
+        "durationUnit": null,
+        "coolingMethod": null,
+        "drainingInstructions": null,
+        "policyReferenceId": null
+      },
+      "packaging": {
+        "containerTypes": [],
+        "removeAir": null,
+        "headspace": null,
+        "portioningGuidance": null,
+        "labelRequired": true,
+        "labelFields": ["food-name", "frozen-date"]
+      },
+      "texture": {
+        "changeExpected": null,
+        "severity": "unknown",
+        "description": null,
+        "qualityLimitations": []
+      },
+      "recommendedUsesAfterFreezing": [],
+      "qualityWindow": {
+        "status": "review-required",
+        "minimumDuration": null,
+        "maximumDuration": null,
+        "durationUnit": null,
+        "storageTemperatureC": -18,
+        "basis": "quality",
+        "userFacingLabel": null
+      },
+      "thawing": {
+        "status": "unknown",
+        "approvedMethodIds": [],
+        "prohibitedMethodIds": ["room-temperature"],
+        "instructions": null,
+        "useImmediatelyAfterThawing": null
+      },
+      "cookFromFrozen": {
+        "status": "unknown",
+        "allowedMethodIds": [],
+        "instructions": null
+      },
+      "refreezing": {
+        "status": "policy-unavailable",
+        "policyReferenceId": null
+      },
+      "contraindications": ["unreviewed-ai-guidance"],
+      "evidence": [],
+      "review": {
+        "status": "draft-ai-generated",
+        "generatedBy": "ai",
+        "generatedModel": "codex",
+        "generatedAt": "2026-08-12T00:00:00.000Z",
+        "submittedForReviewAt": null,
+        "approvedAt": null,
+        "approvedByUserId": null,
+        "reviewerRole": null,
+        "secondReviewerUserId": null,
+        "reviewDueAt": null,
+        "contentHash": "freezer-guidance-content::spinach-raw-fresh::draft-v1",
+        "approvalContentHash": null,
+        "reviewHistory": [
+          { "action": "draft-ai-generated", "actorRole": "ai-system", "at": "2026-08-12T00:00:00.000Z", "note": "Draft quarantined. Not visible in consumer freezer guidance." }
+        ]
+      },
+      "lifecycle": {
+        "status": "active",
+        "effectiveAt": null,
+        "retiredAt": null,
+        "supersededByPolicyId": null
+      },
+      "metadata": {
+        "createdAt": "2026-08-12T00:00:00.000Z",
+        "updatedAt": "2026-08-12T00:00:00.000Z"
+      }
+    }
+  ],
+  "legacyMigration": {
+    "status": "ready",
+    "unsourcedBooleanBehavior": "draft-review-required",
+    "idempotencyKey": "freezer-guidance-legacy-migration::v1"
+  }
+}

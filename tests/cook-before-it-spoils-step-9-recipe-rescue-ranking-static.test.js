@@ -1,0 +1,44 @@
+const fs = require("fs");
+const path = require("path");
+const assert = require("assert");
+
+const root = path.resolve(__dirname, "..");
+const app = fs.readFileSync(path.join(root, "app.js"), "utf8");
+const css = fs.readFileSync(path.join(root, "style.css"), "utf8");
+const doc = fs.readFileSync(path.join(root, "docs", "cook-before-it-spoils-recipe-rescue-ranking.md"), "utf8");
+const report = fs.readFileSync(path.join(root, "docs", "cook-before-it-spoils-step-9-report.md"), "utf8");
+const usageFunction = app.slice(app.indexOf("function calculateFoodRescueSelectedFoodUsage"), app.indexOf("function buildFoodRescueScaledRequirement"));
+
+assert(app.includes("FOOD_RESCUE_RANKING_PROFILE = \"food-rescue\""), "Food-rescue ranking profile must be declared.");
+assert(app.includes("FOOD_RESCUE_RECIPE_RANKING_VERSION"), "Ranking version must be declared.");
+assert(app.includes("FOOD_RESCUE_RECIPE_SCORE_CONFIG"), "Score configuration must be declared.");
+assert(app.includes("meaningfulUse: { minimumUseRatio: 0.15"), "Meaningful use threshold must be 15%.");
+assert(app.includes("foodRescueRankingRequest: null"), "Ranking request must be temporary app state.");
+assert(app.includes("createFoodRescueRankingRequest"), "Ranking request builder must exist.");
+assert(app.includes("revalidateFoodRescueSelectedSources"), "Selected rescue sources must be revalidated.");
+assert(app.includes("deriveUseFirstPriorityForPantryItem"), "Step 7 priority data must be reused.");
+assert(app.includes("calculateFoodRescueSelectedFoodUsage"), "Selected-food usage calculation must exist.");
+assert(usageFunction.includes("ingredientId === required.ingredientId"), "Rescue matching must use structured ingredient ids.");
+assert(!/recipe\.name|recipeName|title|category/.test(usageFunction), "Rescue usage calculation must not rely on title or category matching.");
+assert(app.includes("foodRescueFormsCompatible"), "Recipe/source forms must be checked.");
+assert(app.includes("COST_ENGINE.normalizeComparableQuantity"), "Compatible quantity comparison must use the cost engine.");
+assert(app.includes("COST_ENGINE.scaleIngredientQuantity"), "Ingredient quantities must be scaled for servings.");
+assert(app.includes("calculateFoodRescuePantryCoverageWithSharedAllocator"), "Pantry coverage must use the shared Pantry-first allocator.");
+assert(app.includes("PANTRY_FIRST.simulateRecipeAgainstInventory"), "Recipe ranking must reuse Pantry-first simulation.");
+assert(app.includes("evaluateRecipeForCurrentRequirements"), "Existing recipe eligibility checks must be preserved.");
+assert(app.includes("calculateFoodRescuePurchaseMetrics"), "New purchase metrics must be calculated.");
+assert(app.includes("knownFullPackageCostCents"), "Full package cost must be represented.");
+assert(app.includes("incompletePriceCount"), "Missing price data must be tracked instead of treated as zero.");
+assert(app.includes("calculateFoodRescuePortionSuitability"), "Portion suitability must be scored.");
+assert(app.includes("calculateFoodRescueLeftoverFit"), "Leftover impact must be scored.");
+assert(app.includes("calculateFoodRescueCrossMealUse"), "Cross-meal ingredient reuse must be scored.");
+assert(app.includes("compareFoodRescueRecipeResults"), "Deterministic ranking tie-breaker must exist.");
+assert(app.includes("renderFoodRescueRecipeSummary"), "Recipe cards must show rescue ranking information.");
+assert(app.includes("openFoodRescueRecipeDetails"), "Rescue details modal must exist.");
+assert(app.includes("state.foodRescueRankingRequest = null;"), "Clear search must reset the rescue profile.");
+assert(css.includes(".food-rescue-result-summary"), "Rescue ranking card styling must exist.");
+assert(css.includes(".food-rescue-score"), "Rescue score styling must exist.");
+assert(doc.includes("Recipe titles, category labels, and free-text descriptions do not count"), "Documentation must state structured matching rule.");
+assert(report.includes("No new localStorage or sessionStorage keys were added"), "Report must document storage behavior.");
+
+console.log("Cook Before It Spoils Step 9 static checks passed.");
